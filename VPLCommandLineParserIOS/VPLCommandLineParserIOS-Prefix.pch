@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'VPLCommandLineParserIOS' target in the 'VPLCommandLineParserIOS' project
+//
+
+#ifdef __OBJC__
+  #import <Foundation/Foundation.h>
+#endif
