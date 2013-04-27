@@ -18,6 +18,11 @@
 		CD0F0E5D172C80B500C6A10C /* VPLCLIInterleavedGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E5A172C80B500C6A10C /* VPLCLIInterleavedGroup.m */; };
 		CD0F0E60172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E5F172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m */; };
 		CD0F0E61172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E5F172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m */; };
+		CD0F0E64172C897C00C6A10C /* VPLCLIChoiceGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0F0E62172C897B00C6A10C /* VPLCLIChoiceGroup.h */; };
+		CD0F0E65172C897C00C6A10C /* VPLCLIChoiceGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E63172C897B00C6A10C /* VPLCLIChoiceGroup.m */; };
+		CD0F0E66172C897C00C6A10C /* VPLCLIChoiceGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E63172C897B00C6A10C /* VPLCLIChoiceGroup.m */; };
+		CD0F0E69172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E68172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m */; };
+		CD0F0E6A172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E68172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m */; };
 		CD475FC917231A7B00126EB8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FC817231A7B00126EB8 /* SenTestingKit.framework */; };
 		CD475FCD17231A7B00126EB8 /* libVPLCommandLineParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FB317231A7B00126EB8 /* libVPLCommandLineParser.a */; };
 		CD475FD317231A7B00126EB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD475FD117231A7B00126EB8 /* InfoPlist.strings */; };
@@ -155,6 +160,9 @@
 		CD0F0E59172C80B500C6A10C /* VPLCLIInterleavedGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPLCLIInterleavedGroup.h; sourceTree = "<group>"; };
 		CD0F0E5A172C80B500C6A10C /* VPLCLIInterleavedGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPLCLIInterleavedGroup.m; sourceTree = "<group>"; };
 		CD0F0E5F172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPLCLIInterleavedGroupSpec.m; sourceTree = "<group>"; };
+		CD0F0E62172C897B00C6A10C /* VPLCLIChoiceGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPLCLIChoiceGroup.h; sourceTree = "<group>"; };
+		CD0F0E63172C897B00C6A10C /* VPLCLIChoiceGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPLCLIChoiceGroup.m; sourceTree = "<group>"; };
+		CD0F0E68172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPLCLIChoiceGroupSpec.m; sourceTree = "<group>"; };
 		CD475FB317231A7B00126EB8 /* libVPLCommandLineParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVPLCommandLineParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD475FB917231A7B00126EB8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CD475FBA17231A7B00126EB8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -303,6 +311,7 @@
 		CD475FCE17231A7B00126EB8 /* VPLCommandLineParserTests */ = {
 			isa = PBXGroup;
 			children = (
+				CD0F0E68172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m */,
 				CD0F0E5F172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m */,
 				CD0F0E481723733100C6A10C /* VPLCLIMatcher+SpecHelper.h */,
 				CD0F0E491723733100C6A10C /* VPLCLIMatcher+SpecHelper.m */,
@@ -327,6 +336,8 @@
 		CD475FE017231AF600126EB8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CD0F0E62172C897B00C6A10C /* VPLCLIChoiceGroup.h */,
+				CD0F0E63172C897B00C6A10C /* VPLCLIChoiceGroup.m */,
 				CD4760461723273400126EB8 /* VPLCLIGroup.h */,
 				CD4760501723286D00126EB8 /* VPLCLIGroup+Protected.h */,
 				CD4760471723273400126EB8 /* VPLCLIGroup.m */,
@@ -455,6 +466,7 @@
 				CD47606D1723349900126EB8 /* VPLCLIMatcher.h in Headers */,
 				CD4760721723361500126EB8 /* VPLCLISegment.h in Headers */,
 				CD0F0E5B172C80B500C6A10C /* VPLCLIInterleavedGroup.h in Headers */,
+				CD0F0E64172C897C00C6A10C /* VPLCLIChoiceGroup.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +731,7 @@
 				CD47606E1723349900126EB8 /* VPLCLIMatcher.m in Sources */,
 				CD4760731723361500126EB8 /* VPLCLISegment.m in Sources */,
 				CD0F0E5C172C80B500C6A10C /* VPLCLIInterleavedGroup.m in Sources */,
+				CD0F0E65172C897C00C6A10C /* VPLCLIChoiceGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +744,7 @@
 				CD0F0E531723759000C6A10C /* VPLCLISequenceSpec.m in Sources */,
 				CD0F0E57172C750A00C6A10C /* VPLCLISegmentSpec.m in Sources */,
 				CD0F0E60172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m in Sources */,
+				CD0F0E69172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +758,7 @@
 				CD47606F1723349900126EB8 /* VPLCLIMatcher.m in Sources */,
 				CD4760741723361500126EB8 /* VPLCLISegment.m in Sources */,
 				CD0F0E5D172C80B500C6A10C /* VPLCLIInterleavedGroup.m in Sources */,
+				CD0F0E66172C897C00C6A10C /* VPLCLIChoiceGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +772,7 @@
 				CD0F0E541723759000C6A10C /* VPLCLISequenceSpec.m in Sources */,
 				CD0F0E58172C750A00C6A10C /* VPLCLISegmentSpec.m in Sources */,
 				CD0F0E61172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m in Sources */,
+				CD0F0E6A172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

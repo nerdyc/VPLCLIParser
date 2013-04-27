@@ -1,4 +1,5 @@
 #import "VPLCLIOption.h"
+#import "VPLCLISegment.h"
 #import "VPLCLIInterleavedGroup.h"
 #import "VPLCLISequence.h"
-#import "VPLCLISegment.h"
+#import "VPLCLIChoiceGroup.h"
