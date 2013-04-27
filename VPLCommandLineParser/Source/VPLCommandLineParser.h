@@ -3,3 +3,4 @@
 #import "VPLCLIInterleavedGroup.h"
 #import "VPLCLISequence.h"
 #import "VPLCLIChoiceGroup.h"
+#import "VPLCLISwitchGroup.h"

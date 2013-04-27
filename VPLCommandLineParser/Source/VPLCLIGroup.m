@@ -16,7 +16,14 @@
 
 - (id)initWithOptions:(NSArray *)options
 {
-  self = [super init];
+  return [self initWithIdentifier:nil
+                          options:options];
+}
+
+- (id)initWithIdentifier:(NSString *)identifier
+                 options:(NSArray *)options
+{
+  self = [super initWithIdentifier:identifier];
   if (self != nil)
   {
     _options = options;

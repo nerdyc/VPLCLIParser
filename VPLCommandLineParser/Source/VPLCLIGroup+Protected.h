@@ -7,4 +7,7 @@
 
 - (id)initWithOptions:(NSArray *)options;
 
+- (id)initWithIdentifier:(NSString *)identifier
+                 options:(NSArray *)options;
+
 @end
