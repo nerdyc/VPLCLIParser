@@ -15,6 +15,25 @@
   return [(VPLCLIChoiceGroup *)[self alloc] initWithOptions:options];
 }
 
+// ===== USAGE STRING ==================================================================================================
+#pragma mark - Usage String
+
+- (NSString *)usageString
+{
+  NSMutableArray * usageStrings = [[NSMutableArray alloc] initWithCapacity:[self.options count]];
+
+  for (VPLCLIMatcher * matcher in self.options)
+  {
+    NSString * matcherUsageString = matcher.usageString;
+    if ([matcherUsageString length] > 0)
+    {
+      [usageStrings addObject:matcherUsageString];
+    }
+  }
+  
+  return [NSString stringWithFormat:@"(%@)", [usageStrings componentsJoinedByString:@" | "]];
+}
+
 // ===== MATCHING ======================================================================================================
 #pragma mark - Matching
 

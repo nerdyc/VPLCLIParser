@@ -75,6 +75,27 @@ describe(@"VPLCLIChoiceGroup", ^{
     
   });
   
+  // ===== USAGE STRING ================================================================================================
+#pragma mark - Usage String
+  
+  describe(@"- usageString", ^{
+    
+    __block NSString * usageString;
+    
+    beforeEach(^{
+      usageString = group.usageString;
+    });
+
+    afterEach(^{
+      usageString = nil;
+    });
+    
+    it(@"returns the options joined by option bars, surrounded by parentheses", ^{
+      expect(usageString).to.equal(@"(--verbose | --help)");
+    });
+    
+  });
+  
 });
 
 SpecEnd

@@ -5,9 +5,3 @@
 #else
 #define VPLCLIAtomicity atomic
 #endif
-
-@class VPLCLIOption;
-@class VPLCLIGroup;
-@class VPLCLISequence;
-@class VPLCLIInterface;
-@class VPLCLISegment;

@@ -87,6 +87,27 @@ describe(@"VPLCLIInterleavedGroup", ^{
     
   });
   
+  // ===== USAGE STRING ================================================================================================
+#pragma mark - Usage String
+  
+  describe(@"- usageString", ^{
+    
+    __block NSString * usageString;
+    
+    beforeEach(^{
+      usageString = group.usageString;
+    });
+    
+    afterEach(^{
+      usageString = nil;
+    });
+    
+    it(@"returns the options' usage strings joined together", ^{
+      expect(usageString).to.equal(@"--verbose --help");
+    });
+    
+  });
+  
 });
 
 SpecEnd

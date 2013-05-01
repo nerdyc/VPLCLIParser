@@ -64,6 +64,28 @@ describe(@"VPLCLISequenceSpec", ^{
     });
     
   });
+  
+  // ===== USAGE STRING ================================================================================================
+#pragma mark - Usage String
+  
+  describe(@"- usageString", ^{
+    
+    __block NSString * usageString;
+    
+    beforeEach(^{
+      usageString = sequence.usageString;
+    });
+    
+    afterEach(^{
+      usageString = nil;
+    });
+    
+    it(@"joins all options' usage strings in order", ^{
+      expect(usageString).to.equal(@"--verbose --help");
+    });
+    
+  });
 
 });
+
 SpecEnd

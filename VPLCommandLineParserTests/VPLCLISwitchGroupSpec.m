@@ -95,6 +95,27 @@ describe(@"VPLCLISwitchGroupSpec", ^{
     
   });
   
+  // ===== USAGE STRING ================================================================================================
+#pragma mark - Usage String
+  
+  describe(@"- usageString", ^{
+    
+    __block NSString * usageString;
+    
+    beforeEach(^{
+      usageString = switchGroup.usageString;
+    });
+    
+    afterEach(^{
+      usageString = nil;
+    });
+    
+    it(@"returns the commands joined by by bars and wrapped with parentheses", ^{
+      expect(usageString).to.equal(@"(exec --async | help --verbose)");
+    });
+    
+  });
+  
 });
 
 SpecEnd

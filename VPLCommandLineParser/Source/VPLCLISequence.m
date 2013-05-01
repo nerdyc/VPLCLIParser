@@ -12,6 +12,28 @@
   return [[VPLCLISequence alloc] initWithOptions:options];
 }
 
+// ===== USAGE STRING ==================================================================================================
+#pragma mark - Usage String
+
+- (NSString *)usageString
+{
+  NSMutableString * usageString = [[NSMutableString alloc] init];
+  for (VPLCLIMatcher * matcher in self.options)
+  {
+    NSString * matcherUsageString = matcher.usageString;
+    if ([matcherUsageString length] > 0)
+    {
+      if ([usageString length] > 0)
+      {
+        [usageString appendString:@" "];
+      }
+      
+      [usageString appendString:matcherUsageString];
+    }
+  }
+  return usageString;
+}
+
 // ===== MATCH ARGUMENTS ===============================================================================================
 #pragma mark - Match Arguments
 

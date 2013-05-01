@@ -24,6 +24,15 @@
   return self;
 }
 
+// ===== USAGE STRING ==================================================================================================
+#pragma mark - Usage String
+
+- (NSString *)usageString
+{
+  VPL_ABSTRACT_METHOD;
+  return nil;
+}
+
 // ===== MATCH ARGUMENTS ===============================================================================================
 #pragma mark - Match Arguments
 

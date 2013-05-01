@@ -24,6 +24,39 @@
   return self;
 }
 
+// ===== USAGE STRING ==================================================================================================
+#pragma mark - Usage String
+
+- (NSString *)usageString
+{
+  NSMutableString * usageString = [[NSMutableString alloc] init];
+  
+  NSArray * orderedCaseNames = [[self.cases allKeys] sortedArrayUsingSelector:@selector(compare:)];
+  for (NSString * caseName in orderedCaseNames)
+  {
+    VPLCLIGroup * caseOptions = self.cases[caseName];
+    if ([usageString length] > 0)
+    {
+      [usageString appendString:@" | "];
+    }
+    
+    NSString * caseOptionsUsageString = caseOptions.usageString;
+    if ([caseOptionsUsageString length] > 0)
+    {
+      [usageString appendString:caseName];
+
+      [usageString appendString:@" "];
+      [usageString appendString:caseOptionsUsageString];
+    }
+    else
+    {
+      [usageString appendString:caseName];
+    }
+  }
+  
+  return [NSString stringWithFormat:@"(%@)", usageString];
+}
+
 // ===== MATCHING ======================================================================================================
 #pragma mark - Matching
 

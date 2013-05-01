@@ -73,6 +73,46 @@ describe(@"VPLCLIOption", ^{
     
   });
 
+  // ===== USAGE STRING ================================================================================================
+#pragma mark - Usage String
+  
+  describe(@"- usageString", ^{
+    
+    __block NSString * usageString;
+    
+    afterEach(^{
+      usageString = nil;
+    });
+    
+    describe(@"when a longName is provided", ^{
+      
+      beforeEach(^{
+        usageString = option.usageString;
+      });
+      
+      it(@"returns the long name prefixed with '--'", ^{
+        expect(usageString).to.equal(@"--verbose");
+      });
+
+    });
+    
+    describe(@"when only a flag is provided", ^{
+      
+      beforeEach(^{
+        option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
+                                                 longName:nil
+                                                     flag:@"v"];
+        usageString = option.usageString;
+      });
+      
+      it(@"returns the flag name prefixed with '-'", ^{
+        expect(usageString).to.equal(@"-v");
+      });
+      
+    });
+    
+  });
+  
 });
 
 SpecEnd

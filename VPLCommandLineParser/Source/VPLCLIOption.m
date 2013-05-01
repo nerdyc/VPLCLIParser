@@ -9,7 +9,7 @@
 - (id)initWithIdentifier:(NSString *)identifier
 {
   return [self initWithIdentifier:identifier
-                         longName:nil
+                         longName:identifier
                              flag:nil];
 }
 
@@ -24,6 +24,25 @@
     _flag = flag;
   }
   return self;
+}
+
+// ===== USAGE STRING ==================================================================================================
+#pragma mark - Usage String
+
+- (NSString *)usageString
+{
+  if (self.longName != nil)
+  {
+    return [NSString stringWithFormat:@"--%@", self.longName];
+  }
+  else if (self.flag != nil)
+  {
+    return [NSString stringWithFormat:@"-%@", self.flag];
+  }
+  else
+  {
+    return @"";
+  }
 }
 
 // ===== MATCH ARGUMENTS ===============================================================================================
