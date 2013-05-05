@@ -36,20 +36,20 @@
 		CD0F0E871730DE8800C6A10C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FE917231CF000126EB8 /* Foundation.framework */; };
 		CD0F0E8A1730DE8800C6A10C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E891730DE8800C6A10C /* main.m */; };
 		CD0F0E8E1730DE8800C6A10C /* VPLUtilityExample.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD0F0E8D1730DE8800C6A10C /* VPLUtilityExample.1 */; };
-		CD0F0E921730DEAE00C6A10C /* libVPLCommandLineParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FB317231A7B00126EB8 /* libVPLCommandLineParser.a */; };
+		CD0F0E921730DEAE00C6A10C /* libVPLCLIParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FB317231A7B00126EB8 /* libVPLCLIParser.a */; };
 		CD475FC917231A7B00126EB8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FC817231A7B00126EB8 /* SenTestingKit.framework */; };
-		CD475FCD17231A7B00126EB8 /* libVPLCommandLineParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FB317231A7B00126EB8 /* libVPLCommandLineParser.a */; };
+		CD475FCD17231A7B00126EB8 /* libVPLCLIParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FB317231A7B00126EB8 /* libVPLCLIParser.a */; };
 		CD475FD317231A7B00126EB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD475FD117231A7B00126EB8 /* InfoPlist.strings */; };
 		CD475FDF17231A9F00126EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FBB17231A7B00126EB8 /* Foundation.framework */; };
-		CD475FE217231B3700126EB8 /* VPLCommandLineParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD475FE117231B1300126EB8 /* VPLCommandLineParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD475FE217231B3700126EB8 /* VPLCLIParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CD475FE117231B1300126EB8 /* VPLCLIParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD475FEA17231CF000126EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FE917231CF000126EB8 /* Foundation.framework */; };
 		CD475FF817231CF100126EB8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FC817231A7B00126EB8 /* SenTestingKit.framework */; };
 		CD475FFA17231CF100126EB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FF917231CF100126EB8 /* UIKit.framework */; };
 		CD475FFB17231CF100126EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FE917231CF000126EB8 /* Foundation.framework */; };
-		CD475FFE17231CF100126EB8 /* libVPLCommandLineParserIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FE817231CF000126EB8 /* libVPLCommandLineParserIOS.a */; };
+		CD475FFE17231CF100126EB8 /* libVPLCLIParserIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FE817231CF000126EB8 /* libVPLCLIParserIOS.a */; };
 		CD47600417231CF100126EB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD47600217231CF100126EB8 /* InfoPlist.strings */; };
-		CD47600717231CF100126EB8 /* VPLCommandLineParserIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD47600617231CF100126EB8 /* VPLCommandLineParserIOSTests.m */; };
-		CD47601117231E5D00126EB8 /* VPLCommandLineParser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD475FE117231B1300126EB8 /* VPLCommandLineParser.h */; };
+		CD47600717231CF100126EB8 /* VPLCLIParserIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD47600617231CF100126EB8 /* VPLCLIParserIOSTests.m */; };
+		CD47601117231E5D00126EB8 /* VPLCLIParser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD475FE117231B1300126EB8 /* VPLCLIParser.h */; };
 		CD4760331723207900126EB8 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD47602C1723205900126EB8 /* libExpecta.a */; };
 		CD4760341723207900126EB8 /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD47601D1723204D00126EB8 /* libSpecta.a */; };
 		CD4760351723208300126EB8 /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD47602E1723205900126EB8 /* libExpecta-iOS.a */; };
@@ -84,14 +84,14 @@
 			containerPortal = CD475FAB17231A7B00126EB8 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CD475FB217231A7B00126EB8;
-			remoteInfo = VPLCommandLineParser;
+			remoteInfo = VPLCLIParser;
 		};
 		CD475FFC17231CF100126EB8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CD475FAB17231A7B00126EB8 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CD475FE717231CF000126EB8;
-			remoteInfo = VPLCommandLineParserIOS;
+			remoteInfo = VPLCLIParserIOS;
 		};
 		CD47601C1723204D00126EB8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -168,7 +168,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				CD47601117231E5D00126EB8 /* VPLCommandLineParser.h in CopyFiles */,
+				CD47601117231E5D00126EB8 /* VPLCLIParser.h in CopyFiles */,
 				CD4760441723237700126EB8 /* VPLCLIOption.h in CopyFiles */,
 				CD4760451723237A00126EB8 /* VPLCLITypes.h in CopyFiles */,
 			);
@@ -197,26 +197,26 @@
 		CD0F0E891730DE8800C6A10C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD0F0E8C1730DE8800C6A10C /* VPLUtilityExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VPLUtilityExample-Prefix.pch"; sourceTree = "<group>"; };
 		CD0F0E8D1730DE8800C6A10C /* VPLUtilityExample.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = VPLUtilityExample.1; sourceTree = "<group>"; };
-		CD475FB317231A7B00126EB8 /* libVPLCommandLineParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVPLCommandLineParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD475FB317231A7B00126EB8 /* libVPLCLIParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVPLCLIParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD475FB917231A7B00126EB8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CD475FBA17231A7B00126EB8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CD475FBB17231A7B00126EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CD475FBE17231A7B00126EB8 /* VPLCommandLineParser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VPLCommandLineParser-Prefix.pch"; sourceTree = "<group>"; };
-		CD475FC717231A7B00126EB8 /* VPLCommandLineParserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPLCommandLineParserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD475FBE17231A7B00126EB8 /* VPLCLIParser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VPLCLIParser-Prefix.pch"; sourceTree = "<group>"; };
+		CD475FC717231A7B00126EB8 /* VPLCLIParserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPLCLIParserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD475FC817231A7B00126EB8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		CD475FD017231A7B00126EB8 /* VPLCommandLineParserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VPLCommandLineParserTests-Info.plist"; sourceTree = "<group>"; };
+		CD475FD017231A7B00126EB8 /* VPLCLIParserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VPLCLIParserTests-Info.plist"; sourceTree = "<group>"; };
 		CD475FD217231A7B00126EB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CD475FE117231B1300126EB8 /* VPLCommandLineParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPLCommandLineParser.h; sourceTree = "<group>"; };
-		CD475FE817231CF000126EB8 /* libVPLCommandLineParserIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVPLCommandLineParserIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD475FE117231B1300126EB8 /* VPLCLIParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPLCLIParser.h; sourceTree = "<group>"; };
+		CD475FE817231CF000126EB8 /* libVPLCLIParserIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVPLCLIParserIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD475FE917231CF000126EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CD475FED17231CF100126EB8 /* VPLCommandLineParserIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VPLCommandLineParserIOS-Prefix.pch"; sourceTree = "<group>"; };
-		CD475FF717231CF100126EB8 /* VPLCommandLineParserIOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPLCommandLineParserIOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD475FED17231CF100126EB8 /* VPLCLIParserIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VPLCLIParserIOS-Prefix.pch"; sourceTree = "<group>"; };
+		CD475FF717231CF100126EB8 /* VPLCLIParserIOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPLCLIParserIOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD475FF917231CF100126EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		CD47600117231CF100126EB8 /* VPLCommandLineParserIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VPLCommandLineParserIOSTests-Info.plist"; sourceTree = "<group>"; };
+		CD47600117231CF100126EB8 /* VPLCLIParserIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VPLCLIParserIOSTests-Info.plist"; sourceTree = "<group>"; };
 		CD47600317231CF100126EB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CD47600517231CF100126EB8 /* VPLCommandLineParserIOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPLCommandLineParserIOSTests.h; sourceTree = "<group>"; };
-		CD47600617231CF100126EB8 /* VPLCommandLineParserIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPLCommandLineParserIOSTests.m; sourceTree = "<group>"; };
-		CD47601017231DC000126EB8 /* VPLCommandLineParserIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPLCommandLineParserIOS.h; sourceTree = "<group>"; };
+		CD47600517231CF100126EB8 /* VPLCLIParserIOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPLCLIParserIOSTests.h; sourceTree = "<group>"; };
+		CD47600617231CF100126EB8 /* VPLCLIParserIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPLCLIParserIOSTests.m; sourceTree = "<group>"; };
+		CD47601017231DC000126EB8 /* VPLCLIParserIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPLCLIParserIOS.h; sourceTree = "<group>"; };
 		CD4760151723204C00126EB8 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Specta.xcodeproj; sourceTree = "<group>"; };
 		CD4760241723205800126EB8 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Expecta.xcodeproj; sourceTree = "<group>"; };
 		CD4760391723213200126EB8 /* VPLCLIOptionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPLCLIOptionSpec.m; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD0F0E921730DEAE00C6A10C /* libVPLCommandLineParser.a in Frameworks */,
+				CD0F0E921730DEAE00C6A10C /* libVPLCLIParser.a in Frameworks */,
 				CD0F0E871730DE8800C6A10C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +261,7 @@
 				CD4760331723207900126EB8 /* libExpecta.a in Frameworks */,
 				CD4760341723207900126EB8 /* libSpecta.a in Frameworks */,
 				CD475FC917231A7B00126EB8 /* SenTestingKit.framework in Frameworks */,
-				CD475FCD17231A7B00126EB8 /* libVPLCommandLineParser.a in Frameworks */,
+				CD475FCD17231A7B00126EB8 /* libVPLCLIParser.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +282,7 @@
 				CD475FF817231CF100126EB8 /* SenTestingKit.framework in Frameworks */,
 				CD475FFA17231CF100126EB8 /* UIKit.framework in Frameworks */,
 				CD475FFB17231CF100126EB8 /* Foundation.framework in Frameworks */,
-				CD475FFE17231CF100126EB8 /* libVPLCommandLineParserIOS.a in Frameworks */,
+				CD475FFE17231CF100126EB8 /* libVPLCLIParserIOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,10 +310,10 @@
 		CD475FAA17231A7B00126EB8 = {
 			isa = PBXGroup;
 			children = (
-				CD475FBC17231A7B00126EB8 /* VPLCommandLineParser */,
-				CD475FCE17231A7B00126EB8 /* VPLCommandLineParserTests */,
-				CD475FEB17231CF100126EB8 /* VPLCommandLineParserIOS */,
-				CD475FFF17231CF100126EB8 /* VPLCommandLineParserIOSTests */,
+				CD475FBC17231A7B00126EB8 /* VPLCLIParser */,
+				CD475FCE17231A7B00126EB8 /* VPLCLIParserTests */,
+				CD475FEB17231CF100126EB8 /* VPLCLIParserIOS */,
+				CD475FFF17231CF100126EB8 /* VPLCLIParserIOSTests */,
 				CD0F0E881730DE8800C6A10C /* VPLUtilityExample */,
 				CD475FB517231A7B00126EB8 /* Frameworks */,
 				CD475FB417231A7B00126EB8 /* Products */,
@@ -324,10 +324,10 @@
 		CD475FB417231A7B00126EB8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD475FB317231A7B00126EB8 /* libVPLCommandLineParser.a */,
-				CD475FC717231A7B00126EB8 /* VPLCommandLineParserTests.octest */,
-				CD475FE817231CF000126EB8 /* libVPLCommandLineParserIOS.a */,
-				CD475FF717231CF100126EB8 /* VPLCommandLineParserIOSTests.octest */,
+				CD475FB317231A7B00126EB8 /* libVPLCLIParser.a */,
+				CD475FC717231A7B00126EB8 /* VPLCLIParserTests.octest */,
+				CD475FE817231CF000126EB8 /* libVPLCLIParserIOS.a */,
+				CD475FF717231CF100126EB8 /* VPLCLIParserIOSTests.octest */,
 				CD0F0E861730DE8800C6A10C /* VPLUtilityExample */,
 			);
 			name = Products;
@@ -354,24 +354,24 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		CD475FBC17231A7B00126EB8 /* VPLCommandLineParser */ = {
+		CD475FBC17231A7B00126EB8 /* VPLCLIParser */ = {
 			isa = PBXGroup;
 			children = (
 				CD475FE017231AF600126EB8 /* Source */,
 				CD475FBD17231A7B00126EB8 /* Supporting Files */,
 			);
-			path = VPLCommandLineParser;
+			path = VPLCLIParser;
 			sourceTree = "<group>";
 		};
 		CD475FBD17231A7B00126EB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CD475FBE17231A7B00126EB8 /* VPLCommandLineParser-Prefix.pch */,
+				CD475FBE17231A7B00126EB8 /* VPLCLIParser-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CD475FCE17231A7B00126EB8 /* VPLCommandLineParserTests */ = {
+		CD475FCE17231A7B00126EB8 /* VPLCLIParserTests */ = {
 			isa = PBXGroup;
 			children = (
 				CD0F0E68172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m */,
@@ -386,13 +386,13 @@
 				CD0F0E71172C8F9800C6A10C /* VPLCLISwitchGroupSpec.m */,
 				CD475FCF17231A7B00126EB8 /* Supporting Files */,
 			);
-			path = VPLCommandLineParserTests;
+			path = VPLCLIParserTests;
 			sourceTree = "<group>";
 		};
 		CD475FCF17231A7B00126EB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CD475FD017231A7B00126EB8 /* VPLCommandLineParserTests-Info.plist */,
+				CD475FD017231A7B00126EB8 /* VPLCLIParserTests-Info.plist */,
 				CD475FD117231A7B00126EB8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -422,42 +422,42 @@
 				CD0F0E6C172C8CBC00C6A10C /* VPLCLISwitchGroup.m */,
 				CD4760421723231400126EB8 /* VPLCLITypes.h */,
 				CD47605C17232B6A00126EB8 /* VPLCLITypes+Protected.h */,
-				CD475FE117231B1300126EB8 /* VPLCommandLineParser.h */,
+				CD475FE117231B1300126EB8 /* VPLCLIParser.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		CD475FEB17231CF100126EB8 /* VPLCommandLineParserIOS */ = {
+		CD475FEB17231CF100126EB8 /* VPLCLIParserIOS */ = {
 			isa = PBXGroup;
 			children = (
 				CD47600F17231D9500126EB8 /* Source */,
 				CD475FEC17231CF100126EB8 /* Supporting Files */,
 			);
-			path = VPLCommandLineParserIOS;
+			path = VPLCLIParserIOS;
 			sourceTree = "<group>";
 		};
 		CD475FEC17231CF100126EB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CD475FED17231CF100126EB8 /* VPLCommandLineParserIOS-Prefix.pch */,
+				CD475FED17231CF100126EB8 /* VPLCLIParserIOS-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CD475FFF17231CF100126EB8 /* VPLCommandLineParserIOSTests */ = {
+		CD475FFF17231CF100126EB8 /* VPLCLIParserIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD47600517231CF100126EB8 /* VPLCommandLineParserIOSTests.h */,
-				CD47600617231CF100126EB8 /* VPLCommandLineParserIOSTests.m */,
+				CD47600517231CF100126EB8 /* VPLCLIParserIOSTests.h */,
+				CD47600617231CF100126EB8 /* VPLCLIParserIOSTests.m */,
 				CD47600017231CF100126EB8 /* Supporting Files */,
 			);
-			path = VPLCommandLineParserIOSTests;
+			path = VPLCLIParserIOSTests;
 			sourceTree = "<group>";
 		};
 		CD47600017231CF100126EB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CD47600117231CF100126EB8 /* VPLCommandLineParserIOSTests-Info.plist */,
+				CD47600117231CF100126EB8 /* VPLCLIParserIOSTests-Info.plist */,
 				CD47600217231CF100126EB8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -466,7 +466,7 @@
 		CD47600F17231D9500126EB8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CD47601017231DC000126EB8 /* VPLCommandLineParserIOS.h */,
+				CD47601017231DC000126EB8 /* VPLCLIParserIOS.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -525,7 +525,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD475FE217231B3700126EB8 /* VPLCommandLineParser.h in Headers */,
+				CD475FE217231B3700126EB8 /* VPLCLIParser.h in Headers */,
 				CD47603F172322E900126EB8 /* VPLCLIOption.h in Headers */,
 				CD4760431723231400126EB8 /* VPLCLITypes.h in Headers */,
 				CD4760481723273400126EB8 /* VPLCLIGroup.h in Headers */,
@@ -561,9 +561,9 @@
 			productReference = CD0F0E861730DE8800C6A10C /* VPLUtilityExample */;
 			productType = "com.apple.product-type.tool";
 		};
-		CD475FB217231A7B00126EB8 /* VPLCommandLineParser */ = {
+		CD475FB217231A7B00126EB8 /* VPLCLIParser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD475FD917231A7B00126EB8 /* Build configuration list for PBXNativeTarget "VPLCommandLineParser" */;
+			buildConfigurationList = CD475FD917231A7B00126EB8 /* Build configuration list for PBXNativeTarget "VPLCLIParser" */;
 			buildPhases = (
 				CD475FAF17231A7B00126EB8 /* Sources */,
 				CD475FB017231A7B00126EB8 /* Frameworks */,
@@ -574,14 +574,14 @@
 			);
 			dependencies = (
 			);
-			name = VPLCommandLineParser;
-			productName = VPLCommandLineParser;
-			productReference = CD475FB317231A7B00126EB8 /* libVPLCommandLineParser.a */;
+			name = VPLCLIParser;
+			productName = VPLCLIParser;
+			productReference = CD475FB317231A7B00126EB8 /* libVPLCLIParser.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		CD475FC617231A7B00126EB8 /* VPLCommandLineParserTests */ = {
+		CD475FC617231A7B00126EB8 /* VPLCLIParserTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD475FDC17231A7B00126EB8 /* Build configuration list for PBXNativeTarget "VPLCommandLineParserTests" */;
+			buildConfigurationList = CD475FDC17231A7B00126EB8 /* Build configuration list for PBXNativeTarget "VPLCLIParserTests" */;
 			buildPhases = (
 				CD475FC217231A7B00126EB8 /* Sources */,
 				CD475FC317231A7B00126EB8 /* Frameworks */,
@@ -593,14 +593,14 @@
 			dependencies = (
 				CD475FCC17231A7B00126EB8 /* PBXTargetDependency */,
 			);
-			name = VPLCommandLineParserTests;
-			productName = VPLCommandLineParserTests;
-			productReference = CD475FC717231A7B00126EB8 /* VPLCommandLineParserTests.octest */;
+			name = VPLCLIParserTests;
+			productName = VPLCLIParserTests;
+			productReference = CD475FC717231A7B00126EB8 /* VPLCLIParserTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		CD475FE717231CF000126EB8 /* VPLCommandLineParserIOS */ = {
+		CD475FE717231CF000126EB8 /* VPLCLIParserIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD47600817231CF100126EB8 /* Build configuration list for PBXNativeTarget "VPLCommandLineParserIOS" */;
+			buildConfigurationList = CD47600817231CF100126EB8 /* Build configuration list for PBXNativeTarget "VPLCLIParserIOS" */;
 			buildPhases = (
 				CD475FE417231CF000126EB8 /* Sources */,
 				CD475FE517231CF000126EB8 /* Frameworks */,
@@ -611,14 +611,14 @@
 			);
 			dependencies = (
 			);
-			name = VPLCommandLineParserIOS;
-			productName = VPLCommandLineParserIOS;
-			productReference = CD475FE817231CF000126EB8 /* libVPLCommandLineParserIOS.a */;
+			name = VPLCLIParserIOS;
+			productName = VPLCLIParserIOS;
+			productReference = CD475FE817231CF000126EB8 /* libVPLCLIParserIOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		CD475FF617231CF100126EB8 /* VPLCommandLineParserIOSTests */ = {
+		CD475FF617231CF100126EB8 /* VPLCLIParserIOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD47600B17231CF100126EB8 /* Build configuration list for PBXNativeTarget "VPLCommandLineParserIOSTests" */;
+			buildConfigurationList = CD47600B17231CF100126EB8 /* Build configuration list for PBXNativeTarget "VPLCLIParserIOSTests" */;
 			buildPhases = (
 				CD475FF217231CF100126EB8 /* Sources */,
 				CD475FF317231CF100126EB8 /* Frameworks */,
@@ -630,9 +630,9 @@
 			dependencies = (
 				CD475FFD17231CF100126EB8 /* PBXTargetDependency */,
 			);
-			name = VPLCommandLineParserIOSTests;
-			productName = VPLCommandLineParserIOSTests;
-			productReference = CD475FF717231CF100126EB8 /* VPLCommandLineParserIOSTests.octest */;
+			name = VPLCLIParserIOSTests;
+			productName = VPLCLIParserIOSTests;
+			productReference = CD475FF717231CF100126EB8 /* VPLCLIParserIOSTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -641,10 +641,11 @@
 		CD475FAB17231A7B00126EB8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = VPLCLI;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Vulpine Labs LLC";
 			};
-			buildConfigurationList = CD475FAE17231A7B00126EB8 /* Build configuration list for PBXProject "VPLCommandLineParser" */;
+			buildConfigurationList = CD475FAE17231A7B00126EB8 /* Build configuration list for PBXProject "VPLCLIParser" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -666,10 +667,10 @@
 			);
 			projectRoot = "";
 			targets = (
-				CD475FB217231A7B00126EB8 /* VPLCommandLineParser */,
-				CD475FC617231A7B00126EB8 /* VPLCommandLineParserTests */,
-				CD475FE717231CF000126EB8 /* VPLCommandLineParserIOS */,
-				CD475FF617231CF100126EB8 /* VPLCommandLineParserIOSTests */,
+				CD475FB217231A7B00126EB8 /* VPLCLIParser */,
+				CD475FC617231A7B00126EB8 /* VPLCLIParserTests */,
+				CD475FE717231CF000126EB8 /* VPLCLIParserIOS */,
+				CD475FF617231CF100126EB8 /* VPLCLIParserIOSTests */,
 				CD0F0E851730DE8800C6A10C /* VPLUtilityExample */,
 			);
 		};
@@ -869,7 +870,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD47600717231CF100126EB8 /* VPLCommandLineParserIOSTests.m in Sources */,
+				CD47600717231CF100126EB8 /* VPLCLIParserIOSTests.m in Sources */,
 				CD47603B1723213200126EB8 /* VPLCLIOptionSpec.m in Sources */,
 				CD0F0E4B1723733100C6A10C /* VPLCLIMatcher+SpecHelper.m in Sources */,
 				CD0F0E541723759000C6A10C /* VPLCLISequenceSpec.m in Sources */,
@@ -886,12 +887,12 @@
 /* Begin PBXTargetDependency section */
 		CD475FCC17231A7B00126EB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CD475FB217231A7B00126EB8 /* VPLCommandLineParser */;
+			target = CD475FB217231A7B00126EB8 /* VPLCLIParser */;
 			targetProxy = CD475FCB17231A7B00126EB8 /* PBXContainerItemProxy */;
 		};
 		CD475FFD17231CF100126EB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CD475FE717231CF000126EB8 /* VPLCommandLineParserIOS */;
+			target = CD475FE717231CF000126EB8 /* VPLCLIParserIOS */;
 			targetProxy = CD475FFC17231CF100126EB8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -998,9 +999,9 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VPLCommandLineParser/VPLCommandLineParser-Prefix.pch";
+				GCC_PREFIX_HEADER = "VPLCLIParser/VPLCLIParser-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = VPLCommandLineParserHeaders;
+				PUBLIC_HEADERS_FOLDER_PATH = VPLCLIParserHeaders;
 				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
@@ -1010,9 +1011,9 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VPLCommandLineParser/VPLCommandLineParser-Prefix.pch";
+				GCC_PREFIX_HEADER = "VPLCLIParser/VPLCLIParser-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = VPLCommandLineParserHeaders;
+				PUBLIC_HEADERS_FOLDER_PATH = VPLCLIParserHeaders;
 				STRIP_STYLE = "non-global";
 			};
 			name = Release;
@@ -1023,9 +1024,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VPLCommandLineParser/VPLCommandLineParser-Prefix.pch";
+				GCC_PREFIX_HEADER = "VPLCLIParser/VPLCLIParser-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
-				INFOPLIST_FILE = "VPLCommandLineParserTests/VPLCommandLineParserTests-Info.plist";
+				INFOPLIST_FILE = "VPLCLIParserTests/VPLCLIParserTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -1038,9 +1039,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VPLCommandLineParser/VPLCommandLineParser-Prefix.pch";
+				GCC_PREFIX_HEADER = "VPLCLIParser/VPLCLIParser-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
-				INFOPLIST_FILE = "VPLCommandLineParserTests/VPLCommandLineParserTests-Info.plist";
+				INFOPLIST_FILE = "VPLCLIParserTests/VPLCLIParserTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -1052,13 +1053,13 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
-				DSTROOT = /tmp/VPLCommandLineParserIOS.dst;
+				DSTROOT = /tmp/VPLCLIParserIOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VPLCommandLineParserIOS/VPLCommandLineParserIOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "VPLCLIParserIOS/VPLCLIParserIOS-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = VPLCommandLineParserIOSHeaders;
+				PUBLIC_HEADERS_FOLDER_PATH = VPLCLIParserIOSHeaders;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
@@ -1070,13 +1071,13 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
-				DSTROOT = /tmp/VPLCommandLineParserIOS.dst;
+				DSTROOT = /tmp/VPLCLIParserIOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VPLCommandLineParserIOS/VPLCommandLineParserIOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "VPLCLIParserIOS/VPLCLIParserIOS-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = VPLCommandLineParserIOSHeaders;
+				PUBLIC_HEADERS_FOLDER_PATH = VPLCLIParserIOSHeaders;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
@@ -1092,8 +1093,8 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VPLCommandLineParserIOS/VPLCommandLineParserIOS-Prefix.pch";
-				INFOPLIST_FILE = "VPLCommandLineParserIOSTests/VPLCommandLineParserIOSTests-Info.plist";
+				GCC_PREFIX_HEADER = "VPLCLIParserIOS/VPLCLIParserIOS-Prefix.pch";
+				INFOPLIST_FILE = "VPLCLIParserIOSTests/VPLCLIParserIOSTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1110,8 +1111,8 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VPLCommandLineParserIOS/VPLCommandLineParserIOS-Prefix.pch";
-				INFOPLIST_FILE = "VPLCommandLineParserIOSTests/VPLCommandLineParserIOSTests-Info.plist";
+				GCC_PREFIX_HEADER = "VPLCLIParserIOS/VPLCLIParserIOS-Prefix.pch";
+				INFOPLIST_FILE = "VPLCLIParserIOSTests/VPLCLIParserIOSTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1131,8 +1132,9 @@
 				CD0F0E911730DE8800C6A10C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		CD475FAE17231A7B00126EB8 /* Build configuration list for PBXProject "VPLCommandLineParser" */ = {
+		CD475FAE17231A7B00126EB8 /* Build configuration list for PBXProject "VPLCLIParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD475FD717231A7B00126EB8 /* Debug */,
@@ -1141,7 +1143,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD475FD917231A7B00126EB8 /* Build configuration list for PBXNativeTarget "VPLCommandLineParser" */ = {
+		CD475FD917231A7B00126EB8 /* Build configuration list for PBXNativeTarget "VPLCLIParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD475FDA17231A7B00126EB8 /* Debug */,
@@ -1150,7 +1152,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD475FDC17231A7B00126EB8 /* Build configuration list for PBXNativeTarget "VPLCommandLineParserTests" */ = {
+		CD475FDC17231A7B00126EB8 /* Build configuration list for PBXNativeTarget "VPLCLIParserTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD475FDD17231A7B00126EB8 /* Debug */,
@@ -1159,7 +1161,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD47600817231CF100126EB8 /* Build configuration list for PBXNativeTarget "VPLCommandLineParserIOS" */ = {
+		CD47600817231CF100126EB8 /* Build configuration list for PBXNativeTarget "VPLCLIParserIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD47600917231CF100126EB8 /* Debug */,
@@ -1168,7 +1170,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD47600B17231CF100126EB8 /* Build configuration list for PBXNativeTarget "VPLCommandLineParserIOSTests" */ = {
+		CD47600B17231CF100126EB8 /* Build configuration list for PBXNativeTarget "VPLCLIParserIOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD47600C17231CF100126EB8 /* Debug */,

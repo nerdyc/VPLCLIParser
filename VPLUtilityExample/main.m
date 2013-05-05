@@ -3,7 +3,7 @@
 #endif
 
 #import <Foundation/Foundation.h>
-#import "VPLCommandLineParser.h"
+#import "VPLCLIParser.h"
 
 int main(int argc, const char * argv[])
 {

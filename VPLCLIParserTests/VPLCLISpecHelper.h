@@ -10,6 +10,6 @@
                                                                   [(__ERROR__) localizedDescription], \
                                                                   [(__ERROR__) localizedFailureReason]]
 
-#import "VPLCommandLineParser.h"
+#import "VPLCLIParser.h"
 
 #import "VPLCLIMatcher+SpecHelper.h"

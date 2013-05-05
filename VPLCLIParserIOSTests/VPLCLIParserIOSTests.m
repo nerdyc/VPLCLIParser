@@ -1,14 +1,14 @@
 //
-//  VPLCommandLineParserIOSTests.m
-//  VPLCommandLineParserIOSTests
+//  VPLCLIParserIOSTests.m
+//  VPLCLIParserIOSTests
 //
 //  Created by Christian Niles on 4/20/13.
 //  Copyright (c) 2013 Vulpine Labs LLC. All rights reserved.
 //
 
-#import "VPLCommandLineParserIOSTests.h"
+#import "VPLCLIParserIOSTests.h"
 
-@implementation VPLCommandLineParserIOSTests
+@implementation VPLCLIParserIOSTests
 
 - (void)setUp
 {
@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in VPLCommandLineParserIOSTests");
+    STFail(@"Unit tests are not implemented yet in VPLCLIParserIOSTests");
 }
 
 @end
