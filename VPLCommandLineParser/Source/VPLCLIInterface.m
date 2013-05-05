@@ -5,6 +5,8 @@
 #import "VPLCLIInterface.h"
 #import "VPLCLIMatcher.h"
 #import "VPLCLIGroup.h"
+#import "VPLCLIInterleavedGroup.h"
+#import "VPLCLISegment.h"
 
 @implementation VPLCLIInterface
 
@@ -35,6 +37,16 @@
   return self;
 }
 
+// ===== INTERFACE DEFINITION ==========================================================================================
+#pragma mark - Interface Definition
+
++ (instancetype)interfaceWithOptions:(NSArray *)options
+{
+  VPLCLIInterleavedGroup * interleavedOptions = [VPLCLIInterleavedGroup interleavedGroupWithOptions:options];
+  
+  return [[self alloc] initWithProcessName:[[NSProcessInfo processInfo] processName]
+                                   options:interleavedOptions];
+}
 
 // ===== USAGE STRING ==================================================================================================
 #pragma mark - Usage String
@@ -52,5 +64,28 @@
   
   return usageString;
 }
+
+// ===== PARSING =======================================================================================================
+#pragma mark - Parsing
+
+- (NSDictionary *)dictionaryFromProcessArguments
+{
+  return [self dictionaryFromArguments:[[NSProcessInfo processInfo] arguments]];
+}
+
+- (NSDictionary *)dictionaryFromArguments:(NSArray *)commandLineArguments
+{
+  VPLCLISegment * segment = [self.options matchArguments:commandLineArguments
+                                                 inRange:NSMakeRange(0, [commandLineArguments count])];
+  if (segment != nil)
+  {
+    return [segment dictionaryOfSegmentValues];
+  }
+  else
+  {
+    return nil;
+  }
+}
+
 
 @end

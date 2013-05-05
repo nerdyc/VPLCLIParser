@@ -26,6 +26,22 @@
   return self;
 }
 
++ (instancetype)optionWithName:(NSString *)name
+{
+  return [[self alloc] initWithIdentifier:name
+                                 longName:name
+                                     flag:nil];
+}
+
++ (instancetype)optionWithName:(NSString *)name
+                          flag:(NSString *)flag
+{
+  return [[self alloc] initWithIdentifier:name
+                                 longName:name
+                                     flag:flag];
+}
+
+
 // ===== USAGE STRING ==================================================================================================
 #pragma mark - Usage String
 

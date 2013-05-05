@@ -33,6 +33,10 @@
 		CD0F0E78172C9B8F00C6A10C /* VPLCLIInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E75172C9B8E00C6A10C /* VPLCLIInterface.m */; };
 		CD0F0E7B172C9C7C00C6A10C /* VPLCLIInterfaceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E7A172C9C7C00C6A10C /* VPLCLIInterfaceSpec.m */; };
 		CD0F0E7C172C9C7C00C6A10C /* VPLCLIInterfaceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E7A172C9C7C00C6A10C /* VPLCLIInterfaceSpec.m */; };
+		CD0F0E871730DE8800C6A10C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FE917231CF000126EB8 /* Foundation.framework */; };
+		CD0F0E8A1730DE8800C6A10C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E891730DE8800C6A10C /* main.m */; };
+		CD0F0E8E1730DE8800C6A10C /* VPLUtilityExample.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD0F0E8D1730DE8800C6A10C /* VPLUtilityExample.1 */; };
+		CD0F0E921730DEAE00C6A10C /* libVPLCommandLineParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FB317231A7B00126EB8 /* libVPLCommandLineParser.a */; };
 		CD475FC917231A7B00126EB8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FC817231A7B00126EB8 /* SenTestingKit.framework */; };
 		CD475FCD17231A7B00126EB8 /* libVPLCommandLineParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FB317231A7B00126EB8 /* libVPLCommandLineParser.a */; };
 		CD475FD317231A7B00126EB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD475FD117231A7B00126EB8 /* InfoPlist.strings */; };
@@ -148,6 +152,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		CD0F0E841730DE8800C6A10C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				CD0F0E8E1730DE8800C6A10C /* VPLUtilityExample.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		CD475FE617231CF000126EB8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,6 +193,10 @@
 		CD0F0E74172C9B8E00C6A10C /* VPLCLIInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPLCLIInterface.h; sourceTree = "<group>"; };
 		CD0F0E75172C9B8E00C6A10C /* VPLCLIInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPLCLIInterface.m; sourceTree = "<group>"; };
 		CD0F0E7A172C9C7C00C6A10C /* VPLCLIInterfaceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPLCLIInterfaceSpec.m; sourceTree = "<group>"; };
+		CD0F0E861730DE8800C6A10C /* VPLUtilityExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VPLUtilityExample; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0F0E891730DE8800C6A10C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD0F0E8C1730DE8800C6A10C /* VPLUtilityExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VPLUtilityExample-Prefix.pch"; sourceTree = "<group>"; };
+		CD0F0E8D1730DE8800C6A10C /* VPLUtilityExample.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = VPLUtilityExample.1; sourceTree = "<group>"; };
 		CD475FB317231A7B00126EB8 /* libVPLCommandLineParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVPLCommandLineParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD475FB917231A7B00126EB8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CD475FBA17231A7B00126EB8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -219,6 +237,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CD0F0E831730DE8800C6A10C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0F0E921730DEAE00C6A10C /* libVPLCommandLineParser.a in Frameworks */,
+				CD0F0E871730DE8800C6A10C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD475FB017231A7B00126EB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,6 +289,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD0F0E881730DE8800C6A10C /* VPLUtilityExample */ = {
+			isa = PBXGroup;
+			children = (
+				CD0F0E891730DE8800C6A10C /* main.m */,
+				CD0F0E8D1730DE8800C6A10C /* VPLUtilityExample.1 */,
+				CD0F0E8B1730DE8800C6A10C /* Supporting Files */,
+			);
+			path = VPLUtilityExample;
+			sourceTree = "<group>";
+		};
+		CD0F0E8B1730DE8800C6A10C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD0F0E8C1730DE8800C6A10C /* VPLUtilityExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		CD475FAA17231A7B00126EB8 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +314,7 @@
 				CD475FCE17231A7B00126EB8 /* VPLCommandLineParserTests */,
 				CD475FEB17231CF100126EB8 /* VPLCommandLineParserIOS */,
 				CD475FFF17231CF100126EB8 /* VPLCommandLineParserIOSTests */,
+				CD0F0E881730DE8800C6A10C /* VPLUtilityExample */,
 				CD475FB517231A7B00126EB8 /* Frameworks */,
 				CD475FB417231A7B00126EB8 /* Products */,
 				CD47601217231FFD00126EB8 /* Externals */,
@@ -282,6 +328,7 @@
 				CD475FC717231A7B00126EB8 /* VPLCommandLineParserTests.octest */,
 				CD475FE817231CF000126EB8 /* libVPLCommandLineParserIOS.a */,
 				CD475FF717231CF100126EB8 /* VPLCommandLineParserIOSTests.octest */,
+				CD0F0E861730DE8800C6A10C /* VPLUtilityExample */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -497,6 +544,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		CD0F0E851730DE8800C6A10C /* VPLUtilityExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0F0E8F1730DE8800C6A10C /* Build configuration list for PBXNativeTarget "VPLUtilityExample" */;
+			buildPhases = (
+				CD0F0E821730DE8800C6A10C /* Sources */,
+				CD0F0E831730DE8800C6A10C /* Frameworks */,
+				CD0F0E841730DE8800C6A10C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VPLUtilityExample;
+			productName = VPLUtilityExample;
+			productReference = CD0F0E861730DE8800C6A10C /* VPLUtilityExample */;
+			productType = "com.apple.product-type.tool";
+		};
 		CD475FB217231A7B00126EB8 /* VPLCommandLineParser */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD475FD917231A7B00126EB8 /* Build configuration list for PBXNativeTarget "VPLCommandLineParser" */;
@@ -606,6 +670,7 @@
 				CD475FC617231A7B00126EB8 /* VPLCommandLineParserTests */,
 				CD475FE717231CF000126EB8 /* VPLCommandLineParserIOS */,
 				CD475FF617231CF100126EB8 /* VPLCommandLineParserIOSTests */,
+				CD0F0E851730DE8800C6A10C /* VPLUtilityExample */,
 			);
 		};
 /* End PBXProject section */
@@ -745,6 +810,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CD0F0E821730DE8800C6A10C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0F0E8A1730DE8800C6A10C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD475FAF17231A7B00126EB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -843,6 +916,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CD0F0E901730DE8800C6A10C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VPLUtilityExample/VPLUtilityExample-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD0F0E911730DE8800C6A10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VPLUtilityExample/VPLUtilityExample-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		CD475FD717231A7B00126EB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1033,6 +1124,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CD0F0E8F1730DE8800C6A10C /* Build configuration list for PBXNativeTarget "VPLUtilityExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0F0E901730DE8800C6A10C /* Debug */,
+				CD0F0E911730DE8800C6A10C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CD475FAE17231A7B00126EB8 /* Build configuration list for PBXProject "VPLCommandLineParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

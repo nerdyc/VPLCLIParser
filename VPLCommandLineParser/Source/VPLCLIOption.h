@@ -9,6 +9,11 @@
                 longName:(NSString *)longName
                     flag:(NSString *)flag;
 
++ (instancetype)optionWithName:(NSString *)name;
+
++ (instancetype)optionWithName:(NSString *)name
+                          flag:(NSString *)flag;
+
 // ===== LONG NAME =====================================================================================================
 #pragma mark - Long Name
 

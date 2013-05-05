@@ -28,7 +28,6 @@ describe(@"VPLCLInterface", ^{
     });
     
   });
-
   
   // ===== USAGE STRING ================================================================================================
 #pragma mark - Usage String
@@ -72,6 +71,36 @@ describe(@"VPLCLInterface", ^{
     });
     
   });
+  
+  // ===== INTERFACE HELPERS ===========================================================================================
+#pragma mark - Interface Helpers
+  
+  describe(@"- dictionaryFromArguments:", ^{
+    
+    __block NSDictionary * dictionaryFromArguments;
+    
+    beforeEach(^{
+      interface = [VPLCLIInterface interfaceWithOptions:@[
+                   
+                   [VPLCLIOption optionWithName:@"alpha"],
+                   [VPLCLIOption optionWithName:@"help"],
+                   
+                   ]];
+      
+      dictionaryFromArguments = [interface dictionaryFromArguments:@[ @"--help", @"--alpha" ]];
+    });
+    
+    afterEach(^{
+      dictionaryFromArguments = nil;
+    });
+    
+    it(@"reads command-line arguments and returns a dictionary", ^{
+      expect(dictionaryFromArguments).to.equal((@{ @"help": [NSNull null],
+                                                   @"alpha": [NSNull null] }));
+    });
+    
+  });
+
   
 });
 
