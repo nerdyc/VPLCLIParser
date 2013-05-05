@@ -7,12 +7,17 @@
 
 - (id)initWithIdentifier:(NSString *)identifier
                 longName:(NSString *)longName
-                    flag:(NSString *)flag;
+                    flag:(NSString *)flag
+                required:(BOOL)required;
 
 + (instancetype)optionWithName:(NSString *)name;
 
 + (instancetype)optionWithName:(NSString *)name
                           flag:(NSString *)flag;
+
++ (instancetype)optionWithName:(NSString *)name
+                          flag:(NSString *)flag
+                      required:(BOOL)required;
 
 // ===== LONG NAME =====================================================================================================
 #pragma mark - Long Name

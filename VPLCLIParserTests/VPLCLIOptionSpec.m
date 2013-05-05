@@ -15,7 +15,8 @@ describe(@"VPLCLIOption", ^{
   beforeEach(^{
     option = [[VPLCLIOption alloc] initWithIdentifier:@"verboseOutput"
                                              longName:@"verbose"
-                                                 flag:@"v"];
+                                                 flag:@"v"
+                                             required:YES];
   });
   
   afterEach(^{
@@ -101,12 +102,29 @@ describe(@"VPLCLIOption", ^{
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
                                                  longName:nil
-                                                     flag:@"v"];
+                                                     flag:@"v"
+                                                 required:YES];
         usageString = option.usageString;
       });
       
       it(@"returns the flag name prefixed with '-'", ^{
         expect(usageString).to.equal(@"-v");
+      });
+      
+    });
+    
+    describe(@"when the option is optional", ^{
+      
+      beforeEach(^{
+        option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
+                                                 longName:@"verbose"
+                                                     flag:@"v"
+                                                 required:NO];
+        usageString = option.usageString;
+      });
+      
+      it(@"surrounds the option in square brackets", ^{
+        expect(usageString).to.equal(@"[--verbose]");
       });
       
     });

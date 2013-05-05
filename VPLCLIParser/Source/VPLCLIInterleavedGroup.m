@@ -46,36 +46,61 @@
 {
   NSMutableArray * segments = [[NSMutableArray alloc] init];
   
+  NSMutableIndexSet * indexesOfUnmatchedOptions =
+    [[NSMutableIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, [self.options count])];
+  
+  NSIndexSet * indexesOfRequiredOptions =
+    [self.options indexesOfObjectsPassingTest:^(VPLCLIMatcher * matcher, NSUInteger idx, BOOL *stop) {
+      return matcher.required;
+    }];
+  
+  NSMutableIndexSet * indexesOfUnmatchedRequiredOptions =
+    [[NSMutableIndexSet alloc] initWithIndexSet:indexesOfRequiredOptions];
+  
+  
   NSRange matchedRange = NSMakeRange(range.location, 0);
   NSRange remainingRange = range;
   while (remainingRange.length > 0)
   {
-    VPLCLISegment * segment = nil;
-    for (VPLCLIMatcher * matcher in self.options)
-    {
-      segment = [matcher matchArguments:arguments
-                                inRange:remainingRange];
-      if (segment != nil)
-      {
-        [segments addObject:segment];
-        
-        NSUInteger numberOfMatchedArguments = segment.matchedRange.length;
-        remainingRange.location += numberOfMatchedArguments;
-        remainingRange.length -= numberOfMatchedArguments;
-        matchedRange.length += numberOfMatchedArguments;
-        
-        break;
-      }
-    }
+    __block VPLCLISegment * matchedSegment = nil;
+    [self.options enumerateObjectsAtIndexes:indexesOfUnmatchedOptions
+                                    options:0
+                                 usingBlock:^(VPLCLIMatcher * matcher, NSUInteger idx, BOOL *stop) {
+                                   
+                                   matchedSegment = [matcher matchArguments:arguments
+                                                                    inRange:remainingRange];
+                                   if (matchedSegment != nil)
+                                   {
+                                     [indexesOfUnmatchedOptions removeIndex:idx];
+                                     if (matcher.required)
+                                     {
+                                       [indexesOfUnmatchedRequiredOptions removeIndex:idx];
+                                     }
+                                     *stop = YES;
+                                   }
+                                   
+                                 }];
     
-    // stop matching if a segment wasn't matched
-    if (segment == nil)
+    if (matchedSegment != nil)
+    {
+      [segments addObject:matchedSegment];
+      
+      NSUInteger numberOfMatchedArguments = matchedSegment.matchedRange.length;
+      remainingRange.location += numberOfMatchedArguments;
+      remainingRange.length -= numberOfMatchedArguments;
+      matchedRange.length += numberOfMatchedArguments;
+    }
+    else if ([indexesOfUnmatchedRequiredOptions count] == 0)
     {
       break;
     }
+    else
+    {
+      return nil;
+    }
   }
   
-  if ([segments count] > 0)
+  if ([indexesOfUnmatchedRequiredOptions count] == 0)
   {
     return [[VPLCLISegment alloc] initWithIdentifier:self.identifier
                                     matchedArguments:[arguments subarrayWithRange:range]

@@ -34,7 +34,7 @@
   NSArray * orderedCaseNames = [[self.cases allKeys] sortedArrayUsingSelector:@selector(compare:)];
   for (NSString * caseName in orderedCaseNames)
   {
-    VPLCLIGroup * caseOptions = self.cases[caseName];
+    VPLCLIMatcher * caseOptions = self.cases[caseName];
     if ([usageString length] > 0)
     {
       [usageString appendString:@" | "];

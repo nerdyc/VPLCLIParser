@@ -11,15 +11,24 @@
 
 - (id)init
 {
-  return [self initWithIdentifier:nil];
+  return [self initWithIdentifier:nil
+                         required:YES];
 }
 
 - (id)initWithIdentifier:(NSString *)identifier
+{
+  return [self initWithIdentifier:identifier
+                         required:YES];
+}
+
+- (id)initWithIdentifier:(NSString *)identifier
+                required:(BOOL)required
 {
   self = [super init];
   if (self != nil)
   {
     _identifier = identifier;
+    _required = required;
   }
   return self;
 }

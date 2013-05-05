@@ -10,14 +10,17 @@
 {
   return [self initWithIdentifier:identifier
                          longName:identifier
-                             flag:nil];
+                             flag:nil
+                         required:YES];
 }
 
 - (id)initWithIdentifier:(NSString *)identifier
                 longName:(NSString *)longName
                     flag:(NSString *)flag
+                required:(BOOL)required
 {
-  self = [super initWithIdentifier:identifier];
+  self = [super initWithIdentifier:identifier
+                          required:required];
   if (self != nil)
   {
     _longName = longName;
@@ -30,7 +33,8 @@
 {
   return [[self alloc] initWithIdentifier:name
                                  longName:name
-                                     flag:nil];
+                                     flag:nil
+                                 required:YES];
 }
 
 + (instancetype)optionWithName:(NSString *)name
@@ -38,26 +42,47 @@
 {
   return [[self alloc] initWithIdentifier:name
                                  longName:name
-                                     flag:flag];
+                                     flag:flag
+                                 required:YES];
 }
 
++ (instancetype)optionWithName:(NSString *)name
+                          flag:(NSString *)flag
+                      required:(BOOL)required
+{
+  return [[self alloc] initWithIdentifier:name
+                                 longName:name
+                                     flag:flag
+                                 required:required];
+}
 
 // ===== USAGE STRING ==================================================================================================
 #pragma mark - Usage String
 
 - (NSString *)usageString
 {
+  NSString * optionString = nil;
+  
   if (self.longName != nil)
   {
-    return [NSString stringWithFormat:@"--%@", self.longName];
+    optionString = [NSString stringWithFormat:@"--%@", self.longName];
   }
   else if (self.flag != nil)
   {
-    return [NSString stringWithFormat:@"-%@", self.flag];
+    optionString = [NSString stringWithFormat:@"-%@", self.flag];
   }
   else
   {
     return @"";
+  }
+  
+  if (self.required)
+  {
+    return optionString;
+  }
+  else
+  {
+    return [NSString stringWithFormat:@"[%@]", optionString];
   }
 }
 
@@ -65,7 +90,7 @@
 #pragma mark - Match Arguments
 
 - (VPLCLISegment *)matchArguments:(NSArray *)arguments
-                              inRange:(NSRange)range
+                          inRange:(NSRange)range
 {
   NSString * leadingArgument = arguments[range.location];
   if ([leadingArgument hasPrefix:@"--"])

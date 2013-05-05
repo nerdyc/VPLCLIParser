@@ -9,6 +9,9 @@
 
 - (id)initWithIdentifier:(NSString *)identifier;
 
+- (id)initWithIdentifier:(NSString *)identifier
+                required:(BOOL)required;
+
 // ===== IDENTIFIER ====================================================================================================
 #pragma mark - Identifier
 
@@ -18,6 +21,11 @@
 #pragma mark - Usage String
 
 @property (strong, readonly, VPLCLIAtomicity) NSString * usageString;
+
+// ===== REQUIRED ======================================================================================================
+#pragma mark - Required
+
+@property (assign, readwrite, getter = isRequired, VPLCLIAtomicity) BOOL required;
 
 // ===== MATCH ARGUMENTS ===============================================================================================
 #pragma mark - Match Arguments

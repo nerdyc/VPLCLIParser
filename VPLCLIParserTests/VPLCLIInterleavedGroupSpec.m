@@ -13,11 +13,13 @@ describe(@"VPLCLIInterleavedGroup", ^{
   beforeEach(^{
     VPLCLIOption * verboseOption = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
                                                                    longName:@"verbose"
-                                                                       flag:@"v"];
+                                                                       flag:@"v"
+                                                                   required:YES];
     
     VPLCLIOption * helpOption = [[VPLCLIOption alloc] initWithIdentifier:@"help"
                                                                 longName:@"help"
-                                                                    flag:@"h"];
+                                                                    flag:@"h"
+                                                                required:YES];
     
     group = [VPLCLIInterleavedGroup interleavedGroupWithOptions:@[ verboseOption, helpOption ]];
   });
@@ -73,6 +75,18 @@ describe(@"VPLCLIInterleavedGroup", ^{
       
     });
     
+    describe(@"when a required argument is missing", ^{
+      
+      beforeEach(^{
+        segment = [group matchArguments:@[  @"--verbose" ]];
+      });
+      
+      it(@"returns nil", ^{
+        expect(segment).to.beNil();
+      });
+      
+    });
+    
     describe(@"when the match fails", ^{
       
       beforeEach(^{
@@ -80,6 +94,42 @@ describe(@"VPLCLIInterleavedGroup", ^{
       });
       
       it(@"returns nil", ^{
+        expect(segment).to.beNil();
+      });
+      
+    });
+    
+    describe(@"when an option is not required", ^{
+      
+      beforeEach(^{
+        group = [VPLCLIInterleavedGroup interleavedGroupWithOptions:@[
+                 
+                     [VPLCLIOption optionWithName:@"alpha"],
+                     [VPLCLIOption optionWithName:@"beta"],
+                     [VPLCLIOption optionWithName:@"gamma" flag:@"g" required:NO],
+                 
+                 ]];
+      });
+      
+      it(@"matches when present", ^{
+        segment = [group matchArguments:@[ @"--beta", @"--gamma", @"--alpha" ]];
+        expect(segment).notTo.beNil();
+        expect([segment dictionaryOfSegmentValues]).to.equal((@{  @"alpha": [NSNull null],
+                                                                  @"beta": [NSNull null],
+                                                                  @"gamma": [NSNull null]
+                                                             }));
+      });
+
+      it(@"matches when not present", ^{
+        segment = [group matchArguments:@[ @"--beta", @"--alpha" ]];
+        expect(segment).notTo.beNil();
+        expect([segment dictionaryOfSegmentValues]).to.equal((@{  @"alpha": [NSNull null],
+                                                                  @"beta": [NSNull null]
+                                                              }));
+      });
+      
+      it(@"still fails when a required option is not present",  ^{
+        segment = [group matchArguments:@[ @"--gamma", @"--alpha" ]];
         expect(segment).to.beNil();
       });
       

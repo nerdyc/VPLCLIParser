@@ -38,7 +38,7 @@
 #pragma mark - Match Arguments
 
 - (VPLCLISegment *)matchArguments:(NSArray *)arguments
-                              inRange:(NSRange)range
+                          inRange:(NSRange)range
 {
   NSMutableArray * segments = [[NSMutableArray alloc] init];
   
@@ -46,8 +46,13 @@
   NSRange remainingRange = range;
   for (VPLCLIMatcher * matcher in self.options)
   {
-    VPLCLISegment * segment = [matcher matchArguments:arguments
-                                                    inRange:remainingRange];
+    VPLCLISegment * segment = nil;
+    if (remainingRange.length > 0)
+    {
+      segment = [matcher matchArguments:arguments
+                                inRange:remainingRange];
+    }
+    
     if (segment != nil)
     {
       [segments addObject:segment];
@@ -57,7 +62,7 @@
       remainingRange.length -= numberOfMatchedArguments;
       matchedRange.length += numberOfMatchedArguments;
     }
-    else
+    else if (matcher.required == YES)
     {
       return nil;
     }

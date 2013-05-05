@@ -9,13 +9,21 @@ describe(@"VPLCLISequenceSpec", ^{
   beforeEach(^{
     VPLCLIOption * verboseOption = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
                                                                    longName:@"verbose"
-                                                                       flag:@"v"];
+                                                                       flag:@"v"
+                                                                   required:YES];
     
     VPLCLIOption * helpOption = [[VPLCLIOption alloc] initWithIdentifier:@"help"
                                                                 longName:@"help"
-                                                                    flag:@"h"];
+                                                                    flag:@"h"
+                                                                required:YES];
     
-    sequence = [VPLCLISequence sequenceWithOptions:@[ verboseOption, helpOption ]];
+    
+    VPLCLIOption * unrequiredOption = [[VPLCLIOption alloc] initWithIdentifier:@"skip"
+                                                                      longName:@"skip"
+                                                                          flag:nil
+                                                                      required:NO];
+    
+    sequence = [VPLCLISequence sequenceWithOptions:@[ verboseOption, unrequiredOption, helpOption ]];
   });
   
   afterEach(^{
@@ -36,6 +44,24 @@ describe(@"VPLCLISequenceSpec", ^{
     describe(@"when the arguments match", ^{
       
       beforeEach(^{
+        segment = [sequence matchArguments:@[ @"--verbose", @"--skip", @"-h", @"-o", @"-" ]];
+      });
+      
+      it(@"returns a segment containing the matched options", ^{
+        expect([segment valueOfSegmentIdentifiedBy:@"verbose"]).to.equal([NSNull null]);
+        expect([segment valueOfSegmentIdentifiedBy:@"help"]).to.equal([NSNull null]);
+      });
+      
+      it(@"only matches matchng arguments", ^{
+        expect(segment.matchedRange.location).to.equal(0);
+        expect(segment.matchedRange.length).to.equal(3);
+      });
+      
+    });
+    
+    describe(@"when an unrequired option is missing", ^{
+      
+      beforeEach(^{
         segment = [sequence matchArguments:@[ @"--verbose", @"-h", @"-o", @"-" ]];
       });
       
@@ -51,10 +77,10 @@ describe(@"VPLCLISequenceSpec", ^{
       
     });
     
-    describe(@"when the match fails", ^{
+    describe(@"when the arguments are out of order", ^{
       
       beforeEach(^{
-        segment = [sequence matchArguments:@[@"-h", @"--verbose"]];
+        segment = [sequence matchArguments:@[@"-h", @"--verbose", @"--skip"]];
       });
       
       it(@"returns nil", ^{
@@ -63,6 +89,30 @@ describe(@"VPLCLISequenceSpec", ^{
       
     });
     
+    describe(@"when a required argument is not present", ^{
+      
+      beforeEach(^{
+        segment = [sequence matchArguments:@[ @"--verbose", @"--skip" ]];
+      });
+      
+      it(@"returns nil", ^{
+        expect(segment).to.beNil();
+      });
+      
+    });
+    
+    describe(@"when an unknown option is encountered", ^{
+      
+      beforeEach(^{
+        segment = [sequence matchArguments:@[@"--verbose", @"--skip", @"-o", @"-h"]];
+      });
+      
+      it(@"returns nil", ^{
+        expect(segment).to.beNil();
+      });
+      
+    });
+
   });
   
   // ===== USAGE STRING ================================================================================================
@@ -81,7 +131,7 @@ describe(@"VPLCLISequenceSpec", ^{
     });
     
     it(@"joins all options' usage strings in order", ^{
-      expect(usageString).to.equal(@"--verbose --help");
+      expect(usageString).to.equal(@"--verbose [--skip] --help");
     });
     
   });
