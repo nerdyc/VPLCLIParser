@@ -13,22 +13,22 @@
 		CD0F0E541723759000C6A10C /* VPLCLISequenceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E521723759000C6A10C /* VPLCLISequenceSpec.m */; };
 		CD0F0E57172C750A00C6A10C /* VPLCLISegmentSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E56172C750A00C6A10C /* VPLCLISegmentSpec.m */; };
 		CD0F0E58172C750A00C6A10C /* VPLCLISegmentSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E56172C750A00C6A10C /* VPLCLISegmentSpec.m */; };
-		CD0F0E5B172C80B500C6A10C /* VPLCLIInterleavedGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0F0E59172C80B500C6A10C /* VPLCLIInterleavedGroup.h */; };
+		CD0F0E5B172C80B500C6A10C /* VPLCLIInterleavedGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0F0E59172C80B500C6A10C /* VPLCLIInterleavedGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0F0E5C172C80B500C6A10C /* VPLCLIInterleavedGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E5A172C80B500C6A10C /* VPLCLIInterleavedGroup.m */; };
 		CD0F0E5D172C80B500C6A10C /* VPLCLIInterleavedGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E5A172C80B500C6A10C /* VPLCLIInterleavedGroup.m */; };
 		CD0F0E60172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E5F172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m */; };
 		CD0F0E61172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E5F172C813700C6A10C /* VPLCLIInterleavedGroupSpec.m */; };
-		CD0F0E64172C897C00C6A10C /* VPLCLIChoiceGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0F0E62172C897B00C6A10C /* VPLCLIChoiceGroup.h */; };
+		CD0F0E64172C897C00C6A10C /* VPLCLIChoiceGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0F0E62172C897B00C6A10C /* VPLCLIChoiceGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0F0E65172C897C00C6A10C /* VPLCLIChoiceGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E63172C897B00C6A10C /* VPLCLIChoiceGroup.m */; };
 		CD0F0E66172C897C00C6A10C /* VPLCLIChoiceGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E63172C897B00C6A10C /* VPLCLIChoiceGroup.m */; };
 		CD0F0E69172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E68172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m */; };
 		CD0F0E6A172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E68172C89EA00C6A10C /* VPLCLIChoiceGroupSpec.m */; };
-		CD0F0E6D172C8CBC00C6A10C /* VPLCLISwitchGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0F0E6B172C8CBC00C6A10C /* VPLCLISwitchGroup.h */; };
+		CD0F0E6D172C8CBC00C6A10C /* VPLCLISwitchGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0F0E6B172C8CBC00C6A10C /* VPLCLISwitchGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0F0E6E172C8CBC00C6A10C /* VPLCLISwitchGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E6C172C8CBC00C6A10C /* VPLCLISwitchGroup.m */; };
 		CD0F0E6F172C8CBC00C6A10C /* VPLCLISwitchGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E6C172C8CBC00C6A10C /* VPLCLISwitchGroup.m */; };
 		CD0F0E72172C8F9800C6A10C /* VPLCLISwitchGroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E71172C8F9800C6A10C /* VPLCLISwitchGroupSpec.m */; };
 		CD0F0E73172C8F9800C6A10C /* VPLCLISwitchGroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E71172C8F9800C6A10C /* VPLCLISwitchGroupSpec.m */; };
-		CD0F0E76172C9B8F00C6A10C /* VPLCLIInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0F0E74172C9B8E00C6A10C /* VPLCLIInterface.h */; };
+		CD0F0E76172C9B8F00C6A10C /* VPLCLIInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0F0E74172C9B8E00C6A10C /* VPLCLIInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0F0E77172C9B8F00C6A10C /* VPLCLIInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E75172C9B8E00C6A10C /* VPLCLIInterface.m */; };
 		CD0F0E78172C9B8F00C6A10C /* VPLCLIInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E75172C9B8E00C6A10C /* VPLCLIInterface.m */; };
 		CD0F0E7B172C9C7C00C6A10C /* VPLCLIInterfaceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F0E7A172C9C7C00C6A10C /* VPLCLIInterfaceSpec.m */; };
@@ -48,7 +48,6 @@
 		CD475FFB17231CF100126EB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FE917231CF000126EB8 /* Foundation.framework */; };
 		CD475FFE17231CF100126EB8 /* libVPLCLIParserIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD475FE817231CF000126EB8 /* libVPLCLIParserIOS.a */; };
 		CD47600417231CF100126EB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD47600217231CF100126EB8 /* InfoPlist.strings */; };
-		CD47600717231CF100126EB8 /* VPLCLIParserIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD47600617231CF100126EB8 /* VPLCLIParserIOSTests.m */; };
 		CD47601117231E5D00126EB8 /* VPLCLIParser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD475FE117231B1300126EB8 /* VPLCLIParser.h */; };
 		CD4760331723207900126EB8 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD47602C1723205900126EB8 /* libExpecta.a */; };
 		CD4760341723207900126EB8 /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD47601D1723204D00126EB8 /* libSpecta.a */; };
@@ -65,17 +64,25 @@
 		CD4760481723273400126EB8 /* VPLCLIGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4760461723273400126EB8 /* VPLCLIGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD4760491723273400126EB8 /* VPLCLIGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4760471723273400126EB8 /* VPLCLIGroup.m */; };
 		CD47604A1723273400126EB8 /* VPLCLIGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4760471723273400126EB8 /* VPLCLIGroup.m */; };
-		CD47604D1723278300126EB8 /* VPLCLISequence.h in Headers */ = {isa = PBXBuildFile; fileRef = CD47604B1723278200126EB8 /* VPLCLISequence.h */; };
+		CD47604D1723278300126EB8 /* VPLCLISequence.h in Headers */ = {isa = PBXBuildFile; fileRef = CD47604B1723278200126EB8 /* VPLCLISequence.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD47604E1723278300126EB8 /* VPLCLISequence.m in Sources */ = {isa = PBXBuildFile; fileRef = CD47604C1723278300126EB8 /* VPLCLISequence.m */; };
 		CD47604F1723278300126EB8 /* VPLCLISequence.m in Sources */ = {isa = PBXBuildFile; fileRef = CD47604C1723278300126EB8 /* VPLCLISequence.m */; };
-		CD4760511723286D00126EB8 /* VPLCLIGroup+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4760501723286D00126EB8 /* VPLCLIGroup+Protected.h */; };
-		CD47605D17232B6A00126EB8 /* VPLCLITypes+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = CD47605C17232B6A00126EB8 /* VPLCLITypes+Protected.h */; };
-		CD47606D1723349900126EB8 /* VPLCLIMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = CD47606B1723349900126EB8 /* VPLCLIMatcher.h */; };
+		CD4760511723286D00126EB8 /* VPLCLIGroup+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4760501723286D00126EB8 /* VPLCLIGroup+Protected.h */; settings = {ATTRIBUTES = (); }; };
+		CD47605D17232B6A00126EB8 /* VPLCLITypes+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = CD47605C17232B6A00126EB8 /* VPLCLITypes+Protected.h */; settings = {ATTRIBUTES = (); }; };
+		CD47606D1723349900126EB8 /* VPLCLIMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = CD47606B1723349900126EB8 /* VPLCLIMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD47606E1723349900126EB8 /* VPLCLIMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CD47606C1723349900126EB8 /* VPLCLIMatcher.m */; };
 		CD47606F1723349900126EB8 /* VPLCLIMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CD47606C1723349900126EB8 /* VPLCLIMatcher.m */; };
-		CD4760721723361500126EB8 /* VPLCLISegment.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4760701723361400126EB8 /* VPLCLISegment.h */; };
+		CD4760721723361500126EB8 /* VPLCLISegment.h in Headers */ = {isa = PBXBuildFile; fileRef = CD4760701723361400126EB8 /* VPLCLISegment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD4760731723361500126EB8 /* VPLCLISegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4760711723361400126EB8 /* VPLCLISegment.m */; };
 		CD4760741723361500126EB8 /* VPLCLISegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4760711723361400126EB8 /* VPLCLISegment.m */; };
+		CD6858CF1736EB720077D28F /* VPLCLIChoiceGroup.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD0F0E62172C897B00C6A10C /* VPLCLIChoiceGroup.h */; };
+		CD6858D01736EB720077D28F /* VPLCLIGroup.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD4760461723273400126EB8 /* VPLCLIGroup.h */; };
+		CD6858D11736EB720077D28F /* VPLCLIInterface.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD0F0E74172C9B8E00C6A10C /* VPLCLIInterface.h */; };
+		CD6858D21736EB720077D28F /* VPLCLIInterleavedGroup.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD0F0E59172C80B500C6A10C /* VPLCLIInterleavedGroup.h */; };
+		CD6858D31736EB720077D28F /* VPLCLIMatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD47606B1723349900126EB8 /* VPLCLIMatcher.h */; };
+		CD6858D41736EB720077D28F /* VPLCLISegment.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD4760701723361400126EB8 /* VPLCLISegment.h */; };
+		CD6858D51736EB720077D28F /* VPLCLISequence.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD47604B1723278200126EB8 /* VPLCLISequence.h */; };
+		CD6858D61736EB720077D28F /* VPLCLISwitchGroup.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD0F0E6B172C8CBC00C6A10C /* VPLCLISwitchGroup.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +156,20 @@
 			remoteGlobalIDString = E93067DA13B2E6D100EA26FF;
 			remoteInfo = "Expecta-iOSTests";
 		};
+		CD6858CB1736EACB0077D28F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD4760151723204C00126EB8 /* Specta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E9B777A314BA294B00D8DC76;
+			remoteInfo = "Specta-iOS";
+		};
+		CD6858CD1736EACB0077D28F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD4760241723205800126EB8 /* Expecta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E93067CD13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -168,6 +189,14 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				CD6858CF1736EB720077D28F /* VPLCLIChoiceGroup.h in CopyFiles */,
+				CD6858D01736EB720077D28F /* VPLCLIGroup.h in CopyFiles */,
+				CD6858D11736EB720077D28F /* VPLCLIInterface.h in CopyFiles */,
+				CD6858D21736EB720077D28F /* VPLCLIInterleavedGroup.h in CopyFiles */,
+				CD6858D31736EB720077D28F /* VPLCLIMatcher.h in CopyFiles */,
+				CD6858D41736EB720077D28F /* VPLCLISegment.h in CopyFiles */,
+				CD6858D51736EB720077D28F /* VPLCLISequence.h in CopyFiles */,
+				CD6858D61736EB720077D28F /* VPLCLISwitchGroup.h in CopyFiles */,
 				CD47601117231E5D00126EB8 /* VPLCLIParser.h in CopyFiles */,
 				CD4760441723237700126EB8 /* VPLCLIOption.h in CopyFiles */,
 				CD4760451723237A00126EB8 /* VPLCLITypes.h in CopyFiles */,
@@ -214,8 +243,6 @@
 		CD475FF917231CF100126EB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		CD47600117231CF100126EB8 /* VPLCLIParserIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VPLCLIParserIOSTests-Info.plist"; sourceTree = "<group>"; };
 		CD47600317231CF100126EB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CD47600517231CF100126EB8 /* VPLCLIParserIOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPLCLIParserIOSTests.h; sourceTree = "<group>"; };
-		CD47600617231CF100126EB8 /* VPLCLIParserIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPLCLIParserIOSTests.m; sourceTree = "<group>"; };
 		CD47601017231DC000126EB8 /* VPLCLIParserIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPLCLIParserIOS.h; sourceTree = "<group>"; };
 		CD4760151723204C00126EB8 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Specta.xcodeproj; sourceTree = "<group>"; };
 		CD4760241723205800126EB8 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Expecta.xcodeproj; sourceTree = "<group>"; };
@@ -447,8 +474,6 @@
 		CD475FFF17231CF100126EB8 /* VPLCLIParserIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD47600517231CF100126EB8 /* VPLCLIParserIOSTests.h */,
-				CD47600617231CF100126EB8 /* VPLCLIParserIOSTests.m */,
 				CD47600017231CF100126EB8 /* Supporting Files */,
 			);
 			path = VPLCLIParserIOSTests;
@@ -530,14 +555,14 @@
 				CD4760431723231400126EB8 /* VPLCLITypes.h in Headers */,
 				CD4760481723273400126EB8 /* VPLCLIGroup.h in Headers */,
 				CD47604D1723278300126EB8 /* VPLCLISequence.h in Headers */,
-				CD4760511723286D00126EB8 /* VPLCLIGroup+Protected.h in Headers */,
-				CD47605D17232B6A00126EB8 /* VPLCLITypes+Protected.h in Headers */,
 				CD47606D1723349900126EB8 /* VPLCLIMatcher.h in Headers */,
 				CD4760721723361500126EB8 /* VPLCLISegment.h in Headers */,
 				CD0F0E5B172C80B500C6A10C /* VPLCLIInterleavedGroup.h in Headers */,
 				CD0F0E64172C897C00C6A10C /* VPLCLIChoiceGroup.h in Headers */,
 				CD0F0E6D172C8CBC00C6A10C /* VPLCLISwitchGroup.h in Headers */,
 				CD0F0E76172C9B8F00C6A10C /* VPLCLIInterface.h in Headers */,
+				CD4760511723286D00126EB8 /* VPLCLIGroup+Protected.h in Headers */,
+				CD47605D17232B6A00126EB8 /* VPLCLITypes+Protected.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +630,6 @@
 				CD475FE417231CF000126EB8 /* Sources */,
 				CD475FE517231CF000126EB8 /* Frameworks */,
 				CD475FE617231CF000126EB8 /* CopyFiles */,
-				CD47600E17231D1F00126EB8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -628,6 +652,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				CD6858CC1736EACB0077D28F /* PBXTargetDependency */,
+				CD6858CE1736EACB0077D28F /* PBXTargetDependency */,
 				CD475FFD17231CF100126EB8 /* PBXTargetDependency */,
 			);
 			name = VPLCLIParserIOSTests;
@@ -795,19 +821,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		CD47600E17231D1F00126EB8 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -870,7 +883,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD47600717231CF100126EB8 /* VPLCLIParserIOSTests.m in Sources */,
 				CD47603B1723213200126EB8 /* VPLCLIOptionSpec.m in Sources */,
 				CD0F0E4B1723733100C6A10C /* VPLCLIMatcher+SpecHelper.m in Sources */,
 				CD0F0E541723759000C6A10C /* VPLCLISequenceSpec.m in Sources */,
@@ -894,6 +906,16 @@
 			isa = PBXTargetDependency;
 			target = CD475FE717231CF000126EB8 /* VPLCLIParserIOS */;
 			targetProxy = CD475FFC17231CF100126EB8 /* PBXContainerItemProxy */;
+		};
+		CD6858CC1736EACB0077D28F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Specta-iOS";
+			targetProxy = CD6858CB1736EACB0077D28F /* PBXContainerItemProxy */;
+		};
+		CD6858CE1736EACB0077D28F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Expecta-iOS";
+			targetProxy = CD6858CD1736EACB0077D28F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1094,6 +1116,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VPLCLIParserIOS/VPLCLIParserIOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				INFOPLIST_FILE = "VPLCLIParserIOSTests/VPLCLIParserIOSTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
@@ -1112,6 +1135,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VPLCLIParserIOS/VPLCLIParserIOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				INFOPLIST_FILE = "VPLCLIParserIOSTests/VPLCLIParserIOSTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
