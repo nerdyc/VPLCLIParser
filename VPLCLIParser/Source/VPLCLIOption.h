@@ -6,8 +6,18 @@
 #pragma mark - Initialization
 
 - (id)initWithIdentifier:(NSString *)identifier
+                required:(BOOL)required;
+
+- (id)initWithIdentifier:(NSString *)identifier
                 longName:(NSString *)longName
                     flag:(NSString *)flag
+                required:(BOOL)required;
+
+- (id)initWithIdentifier:(NSString *)identifier
+                longName:(NSString *)longName
+                    flag:(NSString *)flag
+           minimumValues:(NSInteger)minimumValues
+           maximumValues:(NSInteger)maximumValues
                 required:(BOOL)required;
 
 + (instancetype)optionWithName:(NSString *)name;
@@ -28,5 +38,16 @@
 #pragma mark - Flag
 
 @property (strong, readonly, VPLCLIAtomicity) NSString * flag;
+
+// ===== VALUES ========================================================================================================
+#pragma mark - Values
+
+@property (assign, readonly, VPLCLIAtomicity) NSInteger minimumValues;
+@property (assign, readonly, VPLCLIAtomicity) NSInteger maximumValues;
+
+@property (assign, readonly, VPLCLIAtomicity) BOOL acceptsValues;
+@property (assign, readonly, VPLCLIAtomicity) BOOL requiresValues;
+
+
 
 @end
