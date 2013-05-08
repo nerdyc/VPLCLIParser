@@ -70,7 +70,9 @@
 
 - (NSDictionary *)dictionaryFromProcessArguments
 {
-  return [self dictionaryFromArguments:[[NSProcessInfo processInfo] arguments]];
+  NSArray * processArguments = [[NSProcessInfo processInfo] arguments];
+  
+  return [self dictionaryFromArguments:[processArguments subarrayWithRange:NSMakeRange(1, [processArguments count]-1)]];
 }
 
 - (NSDictionary *)dictionaryFromArguments:(NSArray *)commandLineArguments
