@@ -65,6 +65,39 @@
   return usageString;
 }
 
+- (NSString *)helpText
+{
+  NSMutableString * helpText = [[NSMutableString alloc] init];
+  if (self.processTitle != nil)
+  {
+    [helpText appendString:self.processTitle];
+    [helpText appendString:@"\n"];
+  }
+  else
+  {
+    [helpText appendString:self.processName];
+    [helpText appendString:@"\n"];
+  }
+  
+  if (self.processCopyright)
+  {
+    [helpText appendString:self.processCopyright];
+    [helpText appendString:@"\n"];
+  }
+  
+  if (self.processDescription)
+  {
+    [helpText appendString:self.processDescription];
+    [helpText appendString:@"\n"];
+  }
+
+  [helpText appendString:@"\n"];
+  [helpText appendString:@"Usage: "];
+  [helpText appendString:self.usageString];
+
+  return helpText;
+}
+
 // ===== PARSING =======================================================================================================
 #pragma mark - Parsing
 

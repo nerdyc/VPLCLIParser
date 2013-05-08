@@ -11,10 +11,10 @@ int main(int argc, const char * argv[])
   {
     VPLCLIInterface * interface = [VPLCLIInterface interfaceWithOptions:@[
 
-                                     [VPLCLIOption requiredOptionWithName:@"repeat"
-                                                                     flag:@"r"
-                                                            requiresValue:YES
-                                                               identifier:@"repeatCount"],
+                                     [VPLCLIOption optionWithName:@"repeat"
+                                                             flag:@"r"
+                                                    requiresValue:YES
+                                                       identifier:@"repeatCount"],
                                    
                                      [VPLCLIOption optionWithName:@"verbose"
                                                              flag:@"v"],
@@ -24,10 +24,16 @@ int main(int argc, const char * argv[])
                                    
                                    ]];
     
+    interface.processTitle = @"Command Line Utility (VPLUtilityExample)";
+    interface.processCopyright = @"(c) 2013 Vulpine Labs LLC";
+    interface.processDescription = @"A simple command-line argument parsing example";
     
     NSDictionary * commandLineData = [interface dictionaryFromProcessArguments];
-    if (commandLineData == nil
-        || commandLineData[@"help"] != nil)
+    if (commandLineData[@"help"] != nil)
+    {
+      printf("%s\n", [[interface helpText] UTF8String]);
+    }
+    else if (commandLineData == nil || [commandLineData count] == 0)
     {
       printf("Usage: %s\n", [[interface usageString] UTF8String]);
     }
