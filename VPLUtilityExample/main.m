@@ -11,8 +11,13 @@ int main(int argc, const char * argv[])
   {
     VPLCLIInterface * interface = [VPLCLIInterface interfaceWithOptions:@[
 
-                                     [VPLCLIOption optionWithName:@"alpha"],
-                                     [VPLCLIOption optionWithName:@"help"],
+                                     [VPLCLIOption optionWithName:@"verbose"
+                                                             flag:@"v"
+                                                         required:NO],
+                                   
+                                     [VPLCLIOption optionWithName:@"help"
+                                                             flag:@"h"
+                                                         required:NO]
                                    
                                    ]];
     
