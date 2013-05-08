@@ -8,18 +8,18 @@ describe(@"VPLCLISequenceSpec", ^{
   
   beforeEach(^{
     VPLCLIOption * verboseOption = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                                   longName:@"verbose"
+                                                                   name:@"verbose"
                                                                        flag:@"v"
                                                                    required:YES];
     
     VPLCLIOption * helpOption = [[VPLCLIOption alloc] initWithIdentifier:@"help"
-                                                                longName:@"help"
+                                                                name:@"help"
                                                                     flag:@"h"
                                                                 required:YES];
     
     
     VPLCLIOption * unrequiredOption = [[VPLCLIOption alloc] initWithIdentifier:@"skip"
-                                                                      longName:@"skip"
+                                                                      name:@"skip"
                                                                           flag:nil
                                                                       required:NO];
     

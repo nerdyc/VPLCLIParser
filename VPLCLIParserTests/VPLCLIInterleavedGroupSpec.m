@@ -12,12 +12,12 @@ describe(@"VPLCLIInterleavedGroup", ^{
   
   beforeEach(^{
     VPLCLIOption * verboseOption = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                                   longName:@"verbose"
+                                                                   name:@"verbose"
                                                                        flag:@"v"
                                                                    required:YES];
     
     VPLCLIOption * helpOption = [[VPLCLIOption alloc] initWithIdentifier:@"help"
-                                                                longName:@"help"
+                                                                name:@"help"
                                                                     flag:@"h"
                                                                 required:YES];
     

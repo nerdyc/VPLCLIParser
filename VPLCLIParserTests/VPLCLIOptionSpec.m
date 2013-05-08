@@ -14,7 +14,7 @@ describe(@"VPLCLIOption", ^{
   
   beforeEach(^{
     option = [[VPLCLIOption alloc] initWithIdentifier:@"verboseOutput"
-                                             longName:@"verbose"
+                                             name:@"verbose"
                                                  flag:@"v"
                                              required:YES];
   });
@@ -76,7 +76,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"timeout"
-                                                 longName:@"timeout"
+                                                 name:@"timeout"
                                                      flag:@"t"
                                             minimumValues:0
                                             maximumValues:1
@@ -140,7 +140,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"timeout"
-                                                 longName:@"timeout"
+                                                 name:@"timeout"
                                                      flag:@"t"
                                             minimumValues:0
                                             maximumValues:2
@@ -197,7 +197,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"timeout"
-                                                 longName:@"timeout"
+                                                 name:@"timeout"
                                                      flag:@"t"
                                             minimumValues:1
                                             maximumValues:1
@@ -256,7 +256,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"timeout"
-                                                 longName:@"timeout"
+                                                 name:@"timeout"
                                                      flag:@"t"
                                             minimumValues:2
                                             maximumValues:3
@@ -308,7 +308,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"timeout"
-                                                 longName:@"timeout"
+                                                 name:@"timeout"
                                                      flag:@"t"
                                             minimumValues:2
                                             maximumValues:-1
@@ -369,7 +369,7 @@ describe(@"VPLCLIOption", ^{
       usageString = nil;
     });
     
-    describe(@"when a longName is provided", ^{
+    describe(@"when a name is provided", ^{
       
       beforeEach(^{
         usageString = option.usageString;
@@ -385,7 +385,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                 longName:nil
+                                                 name:nil
                                                      flag:@"v"
                                                  required:YES];
         usageString = option.usageString;
@@ -401,7 +401,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                 longName:@"verbose"
+                                                 name:@"verbose"
                                                      flag:@"v"
                                                  required:NO];
         usageString = option.usageString;
@@ -417,7 +417,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                 longName:@"verbose"
+                                                 name:@"verbose"
                                                      flag:@"v"
                                             minimumValues:0
                                             maximumValues:1
@@ -435,7 +435,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                 longName:@"verbose"
+                                                 name:@"verbose"
                                                      flag:@"v"
                                             minimumValues:0
                                             maximumValues:3
@@ -453,7 +453,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                 longName:@"verbose"
+                                                 name:@"verbose"
                                                      flag:@"v"
                                             minimumValues:0
                                             maximumValues:-1
@@ -471,7 +471,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                 longName:@"verbose"
+                                                 name:@"verbose"
                                                      flag:@"v"
                                             minimumValues:1
                                             maximumValues:1
@@ -489,7 +489,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                 longName:@"verbose"
+                                                 name:@"verbose"
                                                      flag:@"v"
                                             minimumValues:2
                                             maximumValues:2
@@ -507,7 +507,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                 longName:@"verbose"
+                                                 name:@"verbose"
                                                      flag:@"v"
                                             minimumValues:2
                                             maximumValues:3
@@ -525,7 +525,7 @@ describe(@"VPLCLIOption", ^{
       
       beforeEach(^{
         option = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                 longName:@"verbose"
+                                                 name:@"verbose"
                                                      flag:@"v"
                                             minimumValues:2
                                             maximumValues:-1

@@ -11,15 +11,19 @@ int main(int argc, const char * argv[])
   {
     VPLCLIInterface * interface = [VPLCLIInterface interfaceWithOptions:@[
 
+                                     [VPLCLIOption requiredOptionWithName:@"repeat"
+                                                                     flag:@"r"
+                                                            requiresValue:YES
+                                                               identifier:@"repeatCount"],
+                                   
                                      [VPLCLIOption optionWithName:@"verbose"
-                                                             flag:@"v"
-                                                         required:NO],
+                                                             flag:@"v"],
                                    
                                      [VPLCLIOption optionWithName:@"help"
-                                                             flag:@"h"
-                                                         required:NO]
+                                                             flag:@"h"]
                                    
                                    ]];
+    
     
     NSDictionary * commandLineData = [interface dictionaryFromProcessArguments];
     if (commandLineData == nil

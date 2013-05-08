@@ -10,42 +10,7 @@
 #pragma mark - Initialization
 
 - (id)initWithIdentifier:(NSString *)identifier
-{
-  return [self initWithIdentifier:identifier
-                         longName:identifier
-                             flag:nil
-                    minimumValues:DEFAULT_MINIMUM_VALUES
-                    maximumValues:DEFAULT_MAXIMUM_VALUES
-                         required:YES];
-}
-
-- (id)initWithIdentifier:(NSString *)identifier
-                required:(BOOL)required
-{
-  return [self initWithIdentifier:identifier
-                         longName:identifier
-                             flag:nil
-                    minimumValues:DEFAULT_MINIMUM_VALUES
-                    maximumValues:DEFAULT_MAXIMUM_VALUES
-                         required:required];
-}
-
-
-- (id)initWithIdentifier:(NSString *)identifier
-                longName:(NSString *)longName
-                    flag:(NSString *)flag
-                required:(BOOL)required
-{
-  return [self initWithIdentifier:identifier
-                         longName:longName
-                             flag:flag
-                    minimumValues:DEFAULT_MINIMUM_VALUES
-                    maximumValues:DEFAULT_MAXIMUM_VALUES
-                         required:required];
-}
-
-- (id)initWithIdentifier:(NSString *)identifier
-                longName:(NSString *)longName
+                    name:(NSString *)name
                     flag:(NSString *)flag
            minimumValues:(NSInteger)minimumValues
            maximumValues:(NSInteger)maximumValues
@@ -61,11 +26,23 @@
                        (long)maximumValues];
   }
   
+  if (identifier == nil)
+  {
+    if (name != nil)
+    {
+      identifier = name;
+    }
+    else
+    {
+      identifier = flag;
+    }
+  }
+  
   self = [super initWithIdentifier:identifier
                           required:required];
   if (self != nil)
   {
-    _longName = longName;
+    _name = name;
     _flag = flag;
     _minimumValues = minimumValues;
     _maximumValues = maximumValues;
@@ -75,35 +52,82 @@
 
 + (instancetype)optionWithName:(NSString *)name
 {
-  return [[self alloc] initWithIdentifier:name
-                                 longName:name
-                                     flag:nil
-                            minimumValues:DEFAULT_MINIMUM_VALUES
-                            maximumValues:DEFAULT_MAXIMUM_VALUES
-                                 required:YES];
+  return [self optionWithName:name
+                         flag:nil
+                requiresValue:NO
+                   identifier:nil];
 }
 
 + (instancetype)optionWithName:(NSString *)name
                           flag:(NSString *)flag
 {
-  return [[self alloc] initWithIdentifier:name
-                                 longName:name
-                                     flag:flag
-                            minimumValues:DEFAULT_MINIMUM_VALUES
-                            maximumValues:DEFAULT_MAXIMUM_VALUES
-                                 required:YES];
+  return [self optionWithName:name
+                         flag:flag
+                requiresValue:NO
+                   identifier:nil];
 }
 
 + (instancetype)optionWithName:(NSString *)name
                           flag:(NSString *)flag
-                      required:(BOOL)required
+                 requiresValue:(BOOL)requiresValue
 {
-  return [[self alloc] initWithIdentifier:name
-                                 longName:name
+  return [self optionWithName:name
+                         flag:flag
+                requiresValue:requiresValue
+                   identifier:nil];
+}
+
++ (instancetype)optionWithName:(NSString *)name
+                          flag:(NSString *)flag
+                 requiresValue:(BOOL)requiresValue
+                    identifier:(NSString *)identifier
+{
+  return [[self alloc] initWithIdentifier:identifier
+                                     name:name
                                      flag:flag
-                            minimumValues:DEFAULT_MINIMUM_VALUES
-                            maximumValues:DEFAULT_MAXIMUM_VALUES
-                                 required:required];
+                            minimumValues:(requiresValue ? 1 : 0)
+                            maximumValues:(requiresValue ? 1 : 0)
+                                 required:NO];
+}
+
++ (instancetype)requiredOptionWithName:(NSString *)name
+{
+  return [self requiredOptionWithName:name
+                                 flag:nil
+                        requiresValue:NO
+                           identifier:nil];
+}
+
++ (instancetype)requiredOptionWithName:(NSString *)name
+                                  flag:(NSString *)flag
+{
+  return [self requiredOptionWithName:name
+                                 flag:flag
+                        requiresValue:NO
+                           identifier:nil];
+}
+
++ (instancetype)requiredOptionWithName:(NSString *)name
+                                  flag:(NSString *)flag
+                         requiresValue:(BOOL)requiresValue
+{
+  return [self requiredOptionWithName:name
+                                 flag:flag
+                        requiresValue:requiresValue
+                           identifier:nil];
+}
+
++ (instancetype)requiredOptionWithName:(NSString *)name
+                                  flag:(NSString *)flag
+                         requiresValue:(BOOL)requiresValue
+                            identifier:(NSString *)identifier
+{
+  return [[self alloc] initWithIdentifier:identifier
+                                     name:name
+                                     flag:flag
+                            minimumValues:(requiresValue ? 1 : 0)
+                            maximumValues:(requiresValue ? 1 : 0)
+                                 required:YES];
 }
 
 // ===== VALUES ========================================================================================================
@@ -138,10 +162,10 @@
     [optionString appendString:@"["];
   }
   
-  if (self.longName != nil)
+  if (self.name != nil)
   {
     [optionString appendString:@"--"];
-    [optionString appendString:self.longName];
+    [optionString appendString:self.name];
   }
   else if (self.flag != nil)
   {
@@ -208,31 +232,31 @@
   NSString * inlineValue = nil;
   if ([initialArgument hasPrefix:@"--"])
   {
-    NSRange longNameRange = NSMakeRange(2, [self.longName length]);
-    NSUInteger indexAfterLongName = NSMaxRange(longNameRange);
+    NSRange nameRange = NSMakeRange(2, [self.name length]);
+    NSUInteger indexAfterName = NSMaxRange(nameRange);
     
-    if ([initialArgument length] < indexAfterLongName)
+    if ([initialArgument length] < indexAfterName)
     {
       // the argument is not long enough to match our name
       return nil;
     }
-    else if (NSOrderedSame != [initialArgument compare:self.longName
+    else if (NSOrderedSame != [initialArgument compare:self.name
                                                options:0
-                                                 range:longNameRange])
+                                                 range:nameRange])
     {
       // the argument name doesn't begin with our long option name
       return nil;
     }
     
     // process any inline value...
-    if ([initialArgument length] > indexAfterLongName)
+    if ([initialArgument length] > indexAfterName)
     {
       if (NSOrderedSame == [initialArgument compare:@"="
                                             options:0
-                                              range:NSMakeRange(indexAfterLongName, 1)])
+                                              range:NSMakeRange(indexAfterName, 1)])
       {
         // an inline value has been provided
-        NSUInteger indexOfValue = indexAfterLongName+1;
+        NSUInteger indexOfValue = indexAfterName+1;
         if ([initialArgument length] > indexOfValue)
         {
           inlineValue = [initialArgument substringFromIndex:indexOfValue];

@@ -12,7 +12,7 @@ describe(@"VPLCLISwitchGroupSpec", ^{
   
   beforeEach(^{
     VPLCLIOption * verboseOption = [[VPLCLIOption alloc] initWithIdentifier:@"verbose"
-                                                                   longName:@"verbose"
+                                                                   name:@"verbose"
                                                                        flag:@"v"
                                                                    required:YES];
     
@@ -20,7 +20,7 @@ describe(@"VPLCLISwitchGroupSpec", ^{
     
     
     VPLCLIOption * asyncOption = [[VPLCLIOption alloc] initWithIdentifier:@"asynchronous"
-                                                                 longName:@"async"
+                                                                 name:@"async"
                                                                      flag:nil
                                                                  required:YES];
     VPLCLIInterleavedGroup * execOptions = [VPLCLIInterleavedGroup interleavedGroupWithOptions:@[ asyncOption ]];
